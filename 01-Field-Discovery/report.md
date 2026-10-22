@@ -178,7 +178,18 @@
 
 照片清单：`photos/photo_list.csv`
 
-- `phone_test_selfie.jpg`：课题02测试现场照片（手机+AccuBattery）
+### 课题02：手机发热与掉电实测
+
+- `phone_test_selfie.jpg`：课题02测试现场照片（手机+系统电池分析）
+
+### 课题03：无线信号盲区测绘
+
+- `wifi_dorm_balcony.jpg`：宿舍阳台WiFi测试现场
+- `wifi_dorm_inside.jpg`：宿舍内部WiFi测试现场
+- `wifi_431_corridor_1.jpg`：431走廊WiFi测试现场（下载3.9Mbps）
+- `wifi_431_corridor_2.jpg`：431走廊WiFi测试现场（下载33.6Mbps）
+- `wifi_library.jpg`：图书馆外文图书室WiFi测试现场（下载19.2Mbps）
+- `wifi_elevator.jpg`：电梯口WiFi测试现场
 
 ---
 
