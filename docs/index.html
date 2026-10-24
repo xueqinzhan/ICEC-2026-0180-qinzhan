@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园WiFi信号地图</title>
+    <meta name="description" content="校园WiFi信号覆盖质量地图，基于实测数据">
+    <meta name="theme-color" content="#667eea">
+    <link rel="manifest" href="manifest.json">
+    <style>
+        :root {
+            --primary: #667eea;
+            --primary-dark: #5a67d8;
+            --secondary: #764ba2;
+            --success: #28a745;
+            --good: #20c997;
+            --warning: #ffc107;
+            --danger: #dc3545;
+            --bg: #f0f4f8;
+            --card: #ffffff;
+            --text: #2d3748;
+            --text-light: #718096;
+            --border: #e2e8f0;
+            --shadow: 0 4px 20px rgba(0,0,0,0.08);
+            --radius: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, 'Microsoft YaHei', 'Segoe UI', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            padding-bottom: 70px;
+        }
+
+        /* Header */
+        .app-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 16px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+        }
+
+        .app-header h1 { font-size: 1.3em; }
+        .app-header p { font-size: 0.8em; opacity: 0.85; margin-top: 2px; }
+
+        .header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .building-select {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.4);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            cursor: pointer;
+        }
+
+        .building-select option { color: #333; background: white; }
+
+        /* Tab Navigation */
+        .tab-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--card);
+            display: flex;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 10px 0 8px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3px;
+            color: var(--text-light);
+            font-size: 0.7em;
+            transition: color 0.2s;
+        }
+
+        .tab-btn.active { color: var(--primary); }
+        .tab-btn .tab-icon { font-size: 1.8em; }
+
+        /* Page Sections */
+        .page { display: none; padding: 16px; max-width: 900px; margin: 0 auto; }
+        .page.active { display: block; }
+
+        .card {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 20px;
+            box-shadow: var(--shadow);
+            margin-bottom: 16px;
+        }
+
+        .card h2 {
+            font-size: 1.1em;
+            margin-bottom: 12px;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stat-card .label { font-size: 0.75em; opacity: 0.9; }
+        .stat-card .val { font-size: 1.8em; font-weight: bold; margin-top: 4px; }
+        .stat-card .unit { font-size: 0.45em; opacity: 0.8; }
+
+        /* Map */
+        .map-container {
+            position: relative;
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 2px solid var(--border);
+            background: #f7fafc;
+        }
+
+        .map-container svg { display: block; width: 100%; height: auto; }
+
+        .map-overlay {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+        }
+
+        .wifi-dot {
+            position: absolute;
+            width: 32px; height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            pointer-events: all;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            font-size: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            transform: translate(-50%, -50%);
+            transition: all 0.2s;
+            z-index: 10;
+        }
+
+        .wifi-dot:hover { transform: translate(-50%, -50%) scale(1.25); z-index: 20; }
+
+        .sig-excellent { background: var(--success); }
+        .sig-good { background: var(--good); }
+        .sig-fair { background: var(--warning); color: #333; }
+        .sig-poor { background: var(--danger); }
+
+        .dot-tip {
+            position: absolute;
+            bottom: calc(100% + 6px);
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.85);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-size: 10px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s;
+        }
+
+        .wifi-dot:hover .dot-tip { opacity: 1; }
+
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 12px;
+            flex-wrap: wrap;
+            font-size: 0.8em;
+        }
+
+        .legend-item { display: flex; align-items: center; gap: 5px; }
+        .legend-dot { width: 14px; height: 14px; border-radius: 50%; }
+
+        /* Charts */
+        .chart-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        @media (max-width: 600px) { .chart-row { grid-template-columns: 1fr; } }
+
+        .bar-chart {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            height: 180px;
+            padding: 8px 0 0;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .bar-group { display: flex; flex-direction: column; align-items: center; flex: 1; }
+
+        .bar {
+            width: 28px;
+            border-radius: 4px 4px 0 0;
+            cursor: pointer;
+            transition: opacity 0.2s;
+            position: relative;
+        }
+
+        .bar:hover { opacity: 0.8; }
+
+        .bar-val {
+            position: absolute;
+            top: -18px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 10px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .bar-lbl {
+            margin-top: 5px;
+            font-size: 9px;
+            color: var(--text-light);
+            text-align: center;
+            max-width: 60px;
+            line-height: 1.2;
+        }
+
+        /* Form */
+        .form-group { margin-bottom: 14px; }
+        .form-group label { display: block; font-size: 0.85em; font-weight: 600; margin-bottom: 5px; color: var(--text); }
+
+        .form-input {
+            width: 100%;
+            padding: 10px 14px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.95em;
+            transition: border-color 0.2s;
+            font-family: inherit;
+        }
+
+        .form-input:focus { outline: none; border-color: var(--primary); }
+
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.95em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .btn-primary { background: var(--primary); color: white; width: 100%; }
+        .btn-primary:hover { background: var(--primary-dark); }
+        .btn-secondary { background: var(--border); color: var(--text); }
+        .btn-danger { background: var(--danger); color: white; }
+        .btn-sm { padding: 6px 14px; font-size: 0.8em; }
+
+        .btn-row { display: flex; gap: 10px; margin-top: 10px; }
+
+        /* Data Table */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85em;
+        }
+
+        .data-table th {
+            background: #f7fafc;
+            padding: 10px 8px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid var(--border);
+            white-space: nowrap;
+        }
+
+        .data-table td {
+            padding: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .data-table tr:hover td { background: #f7fafc; }
+
+        .sig-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 10px;
+            color: white;
+            font-size: 0.85em;
+            font-weight: bold;
+        }
+
+        .delete-btn {
+            background: none;
+            border: none;
+            color: var(--danger);
+            cursor: pointer;
+            font-size: 1.1em;
+            padding: 2px 6px;
+        }
+
+        /* Heatmap */
+        .heatmap-container {
+            position: relative;
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 2px solid var(--border);
+        }
+
+        .heatmap-container canvas {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .heatmap-legend {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 10px;
+            font-size: 0.8em;
+        }
+
+        .heatmap-gradient {
+            width: 200px;
+            height: 14px;
+            border-radius: 7px;
+            background: linear-gradient(to right, #dc3545, #ffc107, #20c997, #28a745);
+        }
+
+        /* Modal */
+        .modal-bg {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.6);
+            z-index: 200;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-bg.active { display: flex; }
+
+        .modal-box {
+            background: white;
+            padding: 24px;
+            border-radius: var(--radius);
+            max-width: 480px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .modal-box h3 { color: var(--primary); margin-bottom: 4px; }
+        .modal-box .sub { color: var(--text-light); font-size: 0.85em; margin-bottom: 12px; }
+        .modal-close {
+            position: absolute;
+            top: 12px; right: 16px;
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: #999;
+        }
+
+        .detail-table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+        .detail-table td { padding: 8px 10px; border-bottom: 1px solid var(--border); }
+        .detail-table td:first-child { font-weight: 600; color: var(--text-light); width: 35%; }
+
+        .rounds-section { margin-top: 12px; padding-top: 10px; border-top: 2px solid var(--border); }
+        .rounds-section h4 { font-size: 0.9em; color: var(--primary); margin-bottom: 8px; }
+
+        /* About */
+        .about-section { line-height: 1.8; }
+        .about-section h3 { margin: 16px 0 8px; color: var(--primary); }
+        .about-section ul { padding-left: 20px; }
+        .about-section li { margin: 4px 0; }
+
+        /* Filter bar */
+        .filter-bar {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+
+        .filter-bar select, .filter-bar input {
+            padding: 6px 10px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.85em;
+            font-family: inherit;
+        }
+
+        .filter-bar select:focus, .filter-bar input:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-light);
+        }
+
+        .empty-state .icon { font-size: 3em; margin-bottom: 10px; }
+
+        .toast {
+            position: fixed;
+            top: 80px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-20px);
+            background: #333;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 0.9em;
+            opacity: 0;
+            transition: all 0.3s;
+            z-index: 300;
+            pointer-events: none;
+        }
+
+        .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+    </style>
+</head>
+<body>
+    <div class="app-header">
+        <div class="header-row">
+            <div>
+                <h1>校园WiFi信号地图</h1>
+                <p>ICEC 2026-0180 | 深圳城市职业学院</p>
+            </div>
+            <select class="building-select" id="buildingSelect">
+                <option value="building_a">实训楼 4F</option>
+                <option value="canteen">食堂/图书馆</option>
+                <option value="stairwell">楼梯间</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Page: Map -->
+    <div class="page active" id="pageMap">
+        <div class="card">
+            <h2>数据概览</h2>
+            <div class="stats-grid" id="statsGrid"></div>
+        </div>
+
+        <div class="card">
+            <h2>信号分布图</h2>
+            <div class="map-container" id="mapContainer"></div>
+            <div class="legend">
+                <div class="legend-item"><div class="legend-dot sig-excellent"></div>优秀 &gt;-55dBm</div>
+                <div class="legend-item"><div class="legend-dot sig-good"></div>良好 -55~-65</div>
+                <div class="legend-item"><div class="legend-dot sig-fair"></div>一般 -65~-75</div>
+                <div class="legend-item"><div class="legend-dot sig-poor"></div>较差 &lt;-75</div>
+            </div>
+        </div>
+
+        <div class="chart-row">
+            <div class="card">
+                <h2>信号强度 (dBm)</h2>
+                <div class="bar-chart" id="signalChart"></div>
+            </div>
+            <div class="card">
+                <h2>下载速度 (Mbps)</h2>
+                <div class="bar-chart" id="speedChart"></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>延迟对比 (ms)</h2>
+            <div class="bar-chart" id="latencyChart" style="height:160px;"></div>
+        </div>
+    </div>
+
+    <!-- Page: Add -->
+    <div class="page" id="pageAdd">
+        <div class="card">
+            <h2>添加测量点</h2>
+            <form id="addForm">
+                <div class="form-group">
+                    <label>位置名称</label>
+                    <input class="form-input" id="fName" placeholder="如：431实训室" required>
+                </div>
+                <div class="form-group">
+                    <label>环境描述</label>
+                    <input class="form-input" id="fEnv" placeholder="如：无遮挡/室内">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>信号强度 (dBm)</label>
+                        <input class="form-input" id="fSignal" type="number" placeholder="-44" required min="-100" max="-20">
+                    </div>
+                    <div class="form-group">
+                        <label>延迟 (ms)</label>
+                        <input class="form-input" id="fLatency" type="number" placeholder="10" required min="1">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>下载速度 (Mbps)</label>
+                        <input class="form-input" id="fDownload" type="number" placeholder="82.5" required min="0" step="0.1">
+                    </div>
+                    <div class="form-group">
+                        <label>上传速度 (Mbps)</label>
+                        <input class="form-input" id="fUpload" type="number" placeholder="41.5" required min="0" step="0.1">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>地图 X 位置 (%)</label>
+                        <input class="form-input" id="fX" type="number" placeholder="50" min="0" max="100">
+                    </div>
+                    <div class="form-group">
+                        <label>地图 Y 位置 (%)</label>
+                        <input class="form-input" id="fY" type="number" placeholder="50" min="0" max="100">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>所属建筑</label>
+                    <select class="form-input" id="fBuilding">
+                        <option value="building_a">实训楼 4F</option>
+                        <option value="canteen">食堂/图书馆</option>
+                        <option value="stairwell">楼梯间</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary" type="submit">保存测量点</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2>数据管理</h2>
+            <div class="btn-row" style="flex-wrap:wrap;">
+                <button class="btn btn-secondary btn-sm" onclick="exportCSV()">导出 CSV</button>
+                <button class="btn btn-secondary btn-sm" onclick="importCSV()">导入 CSV</button>
+                <button class="btn btn-secondary btn-sm" onclick="exportJSON()">导出 JSON 备份</button>
+                <button class="btn btn-secondary btn-sm" onclick="telemetry.exportLogs()">导出运行日志</button>
+                <button class="btn btn-danger btn-sm" onclick="resetData()">重置所有数据</button>
+            </div>
+            <input type="file" id="fileInput" accept=".csv,.json" style="display:none" onchange="handleFileImport(event)">
+            <p style="font-size:0.8em;color:var(--text-light);margin-top:10px;" id="telemetryStats"></p>
+        </div>
+    </div>
+
+    <!-- Page: Data -->
+    <div class="page" id="pageData">
+        <div class="card">
+            <h2>测量数据列表</h2>
+            <div class="filter-bar">
+                <select id="filterBuilding" onchange="applyFilters()">
+                    <option value="all">全部建筑</option>
+                    <option value="building_a">实训楼 4F</option>
+                    <option value="canteen">食堂/图书馆</option>
+                    <option value="stairwell">楼梯间</option>
+                </select>
+                <select id="filterSignal" onchange="applyFilters()">
+                    <option value="all">全部信号</option>
+                    <option value="excellent">优秀</option>
+                    <option value="good">良好</option>
+                    <option value="fair">一般</option>
+                    <option value="poor">较差</option>
+                </select>
+                <input id="filterSearch" placeholder="搜索位置..." oninput="applyFilters()">
+            </div>
+            <div id="dataListContainer"></div>
+        </div>
+    </div>
+
+    <!-- Page: Heatmap -->
+    <div class="page" id="pageHeat">
+        <div class="card">
+            <h2>信号热力图</h2>
+            <p style="font-size:0.85em;color:var(--text-light);margin-bottom:12px;">基于测量点数据生成的信号覆盖热力分布</p>
+            <div class="heatmap-container" id="heatmapContainer"></div>
+            <div class="heatmap-legend">
+                <span>弱</span>
+                <div class="heatmap-gradient"></div>
+                <span>强</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page: About -->
+    <div class="page" id="pageAbout">
+        <div class="card about-section">
+            <h2>关于本项目</h2>
+            <h3>项目简介</h3>
+            <p>校园WiFi信号地图是一个实用工具，帮助师生快速了解校园各区域的WiFi信号覆盖质量，定位信号盲区。</p>
+
+            <h3>功能特性</h3>
+            <ul>
+                <li>多建筑/楼层切换查看</li>
+                <li>交互式信号分布地图</li>
+                <li>添加自定义测量点</li>
+                <li>信号热力图可视化</li>
+                <li>数据导出 (CSV/JSON)</li>
+                <li>离线使用 (PWA)</li>
+                <li>数据本地存储</li>
+            </ul>
+
+            <h3>数据来源</h3>
+            <p>初始数据来自 2026-10-22 的实地测量，使用 iPhone 15 Pro + Wi-Fi Analyzer 采集 8 个点位共 24 组数据。</p>
+
+            <h3>技术栈</h3>
+            <ul>
+                <li>纯 HTML + CSS + JavaScript</li>
+                <li>SVG 楼层平面图</li>
+                <li>Canvas 热力图渲染</li>
+                <li>localStorage 数据持久化</li>
+                <li>Service Worker 离线缓存</li>
+            </ul>
+
+            <h3>作者信息</h3>
+            <p>考生：qinzhan | 学号后四位：0180<br>深圳城市职业学院 | ICEC 2026</p>
+            <p>GitHub：<a href="https://github.com/xueqinzhan/ICEC-2026-0180-qinzhan" target="_blank">xueqinzhan/ICEC-2026-0180-qinzhan</a></p>
+        </div>
+    </div>
+
+    <!-- Tab Navigation -->
+    <nav class="tab-nav">
+        <button class="tab-btn active" onclick="switchTab('pageMap', this)">
+            <span class="tab-icon">🗺️</span>地图
+        </button>
+        <button class="tab-btn" onclick="switchTab('pageAdd', this)">
+            <span class="tab-icon">➕</span>添加
+        </button>
+        <button class="tab-btn" onclick="switchTab('pageData', this)">
+            <span class="tab-icon">📋</span>数据
+        </button>
+        <button class="tab-btn" onclick="switchTab('pageHeat', this)">
+            <span class="tab-icon">🔥</span>热力图
+        </button>
+        <button class="tab-btn" onclick="switchTab('pageAbout', this)">
+            <span class="tab-icon">ℹ️</span>关于
+        </button>
+    </nav>
+
+    <!-- Detail Modal -->
+    <div class="modal-bg" id="detailModal">
+        <div class="modal-box" id="modalBody"></div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <script>
+    // ===== Data Layer =====
+    const STORAGE_KEY = 'campus_wifi_data_v2';
+
+    const DEFAULT_DATA = [
+        { id: 1, name: '431实训楼内部', env: '无遮挡/室内', x: 58, y: 47, building: 'building_a', signal: -44, latency: 10, download: 82.5, upload: 41.5, time: '2026-10-22 14:30' },
+        { id: 2, name: '431走廊靠窗', env: '室内/靠窗', x: 68, y: 62, building: 'building_a', signal: -54, latency: 13, download: 61.6, upload: 29.0, time: '2026-10-22 14:35' },
+        { id: 3, name: '实训楼门口', env: '室外/室内过渡', x: 86, y: 50, building: 'building_a', signal: -63, latency: 19, download: 43.6, upload: 22.7, time: '2026-10-22 14:37' },
+        { id: 4, name: '走廊靠窗角落', env: '室内/靠窗', x: 65, y: 72, building: 'building_a', signal: -50, latency: 14, download: 59.9, upload: 28.9, time: '2026-10-22 14:40' },
+        { id: 5, name: '走廊靠墙角落', env: '室内/靠墙角落', x: 46, y: 72, building: 'building_a', signal: -65, latency: 24, download: 33.0, upload: 13.6, time: '2026-10-22 14:42' },
+        { id: 6, name: '楼梯转角', env: '室外靠墙/混凝土', x: 22, y: 78, building: 'stairwell', signal: -78, latency: 45, download: 18.6, upload: 8.0, time: '2026-10-22 14:45' },
+        { id: 7, name: '数据机房', env: '室内/金属机柜遮挡', x: 19, y: 47, building: 'building_a', signal: -82, latency: 55, download: 14.2, upload: 3.6, time: '2026-10-22 14:48' },
+        { id: 8, name: '食堂/图书馆入口', env: '开放空间', x: 42, y: 22, building: 'canteen', signal: -57, latency: 20, download: 51.9, upload: 26.7, time: '2026-10-22 14:50' }
+    ];
+
+    function loadData() {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) {
+            try { return JSON.parse(saved); } catch(e) {}
+        }
+        saveData(DEFAULT_DATA);
+        return DEFAULT_DATA;
+    }
+
+    function saveData(data) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    }
+
+    function getNextId(data) {
+        return data.length > 0 ? Math.max(...data.map(d => d.id)) + 1 : 1;
+    }
+
+    let allData = loadData();
+
+    // ===== Utility =====
+    function getSignalClass(s) {
+        if (s > -55) return 'excellent';
+        if (s > -65) return 'good';
+        if (s > -75) return 'fair';
+        return 'poor';
+    }
+
+    function getSignalLabel(s) {
+        if (s > -55) return '优秀';
+        if (s > -65) return '良好';
+        if (s > -75) return '一般';
+        return '较差';
+    }
+
+    function getSigColor(cls) {
+        return { excellent: '#28a745', good: '#20c997', fair: '#ffc107', poor: '#dc3545' }[cls];
+    }
+
+    function getBuildingName(b) {
+        return { building_a: '实训楼 4F', canteen: '食堂/图书馆', stairwell: '楼梯间' }[b] || b;
+    }
+
+    function showToast(msg) {
+        const t = document.getElementById('toast');
+        t.textContent = msg;
+        t.classList.add('show');
+        setTimeout(() => t.classList.remove('show'), 2000);
+    }
+
+    function getFilteredData() {
+        const building = document.getElementById('buildingSelect').value;
+        return allData.filter(d => d.building === building);
+    }
+
+    // ===== Tab Switching =====
+    function switchTab(pageId, btn) {
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.getElementById(pageId).classList.add('active');
+        btn.classList.add('active');
+
+        telemetry.log('tab_switch', { tab: pageId });
+
+        if (pageId === 'pageMap') renderMap();
+        if (pageId === 'pageData') renderDataList();
+        if (pageId === 'pageHeat') renderHeatmap();
+    }
+
+    // ===== SVG Floor Plans =====
+    const FLOOR_PLANS = {
+        building_a: `<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+            <defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="#e2e8f0" stroke-width="0.5"/></pattern></defs>
+            <rect width="800" height="500" fill="url(#grid)"/>
+            <rect x="320" y="170" width="300" height="130" rx="4" fill="#e3f2fd" stroke="#4a5568" stroke-width="2.5"/>
+            <text x="470" y="215" text-anchor="middle" font-size="15" font-weight="bold" fill="#2d3748">431 实训室</text>
+            <text x="470" y="235" text-anchor="middle" font-size="11" fill="#718096">多媒体教室</text>
+            <line x1="380" y1="170" x2="430" y2="170" stroke="#4FC3F7" stroke-width="4"/>
+            <line x1="460" y1="170" x2="510" y2="170" stroke="#4FC3F7" stroke-width="4"/>
+            <line x1="540" y1="170" x2="590" y2="170" stroke="#4FC3F7" stroke-width="4"/>
+            <line x1="580" y1="300" x2="620" y2="300" stroke="#8B6914" stroke-width="3" stroke-dasharray="2,3"/>
+            <rect x="280" y="160" width="40" height="230" fill="#fef9e7" stroke="none"/>
+            <line x1="280" y1="160" x2="280" y2="390" stroke="#4a5568" stroke-width="1.5" stroke-dasharray="5,3"/>
+            <line x1="320" y1="160" x2="320" y2="390" stroke="#4a5568" stroke-width="1.5" stroke-dasharray="5,3"/>
+            <text x="300" y="415" text-anchor="middle" font-size="10" fill="#a0aec0" transform="rotate(-90, 300, 350)">走 廊</text>
+            <rect x="320" y="300" width="300" height="100" rx="4" fill="#fff8e1" stroke="#4a5568" stroke-width="2"/>
+            <text x="470" y="340" text-anchor="middle" font-size="13" fill="#2d3748">走廊靠窗区域</text>
+            <line x1="380" y1="300" x2="430" y2="300" stroke="#4FC3F7" stroke-width="4"/>
+            <line x1="460" y1="300" x2="510" y2="300" stroke="#4FC3F7" stroke-width="4"/>
+            <line x1="540" y1="300" x2="590" y2="300" stroke="#4FC3F7" stroke-width="4"/>
+            <rect x="640" y="210" width="100" height="80" rx="4" fill="#fce4ec" stroke="#4a5568" stroke-width="2"/>
+            <text x="690" y="248" text-anchor="middle" font-size="12" font-weight="bold" fill="#2d3748">楼门口</text>
+            <text x="690" y="265" text-anchor="middle" font-size="10" fill="#718096">出入口</text>
+            <line x1="640" y1="240" x2="640" y2="270" stroke="#8B6914" stroke-width="3" stroke-dasharray="2,3"/>
+            <rect x="60" y="180" width="180" height="110" rx="4" fill="#f3e5f5" stroke="#4a5568" stroke-width="2.5"/>
+            <text x="150" y="225" text-anchor="middle" font-size="14" font-weight="bold" fill="#2d3748">数据机房</text>
+            <text x="150" y="245" text-anchor="middle" font-size="11" fill="#718096">金属机柜遮挡</text>
+            <rect x="85" y="255" width="15" height="20" fill="#9575cd" rx="2" opacity="0.5"/>
+            <rect x="110" y="255" width="15" height="20" fill="#9575cd" rx="2" opacity="0.5"/>
+            <rect x="135" y="255" width="15" height="20" fill="#9575cd" rx="2" opacity="0.5"/>
+            <rect x="160" y="255" width="15" height="20" fill="#9575cd" rx="2" opacity="0.5"/>
+            <rect x="185" y="255" width="15" height="20" fill="#9575cd" rx="2" opacity="0.5"/>
+            <line x1="210" y1="280" x2="240" y2="280" stroke="#8B6914" stroke-width="3" stroke-dasharray="2,3"/>
+            <g transform="translate(740, 450)"><circle cx="0" cy="0" r="20" fill="white" stroke="#4a5568" stroke-width="1.5"/><polygon points="0,-15 -5,5 0,0 5,5" fill="#dc3545"/><polygon points="0,15 -5,-5 0,0 5,-5" fill="#ccc"/><text x="0" y="-22" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">N</text></g>
+            <line x1="30" y1="480" x2="130" y2="480" stroke="#4a5568" stroke-width="2"/>
+            <line x1="30" y1="475" x2="30" y2="485" stroke="#4a5568" stroke-width="2"/>
+            <line x1="130" y1="475" x2="130" y2="485" stroke="#4a5568" stroke-width="2"/>
+            <text x="80" y="475" text-anchor="middle" font-size="10" fill="#4a5568">~10m</text>
+        </svg>`,
+
+        canteen: `<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+            <defs><pattern id="grid2" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="#e2e8f0" stroke-width="0.5"/></pattern></defs>
+            <rect width="800" height="500" fill="url(#grid2)"/>
+            <rect x="100" y="60" width="600" height="350" rx="8" fill="#e8f5e9" stroke="#4a5568" stroke-width="2.5"/>
+            <text x="400" y="130" text-anchor="middle" font-size="20" font-weight="bold" fill="#2d3748">食堂 / 图书馆</text>
+            <text x="400" y="160" text-anchor="middle" font-size="14" fill="#718096">开放空间 · 大面积覆盖</text>
+            <rect x="150" y="200" width="80" height="50" rx="4" fill="#c8e6c9" stroke="#4a5568" stroke-width="1.5"/>
+            <text x="190" y="230" text-anchor="middle" font-size="10" fill="#2d3748">餐桌区</text>
+            <rect x="270" y="200" width="80" height="50" rx="4" fill="#c8e6c9" stroke="#4a5568" stroke-width="1.5"/>
+            <text x="310" y="230" text-anchor="middle" font-size="10" fill="#2d3748">餐桌区</text>
+            <rect x="450" y="200" width="80" height="50" rx="4" fill="#bbdefb" stroke="#4a5568" stroke-width="1.5"/>
+            <text x="490" y="230" text-anchor="middle" font-size="10" fill="#2d3748">书架区</text>
+            <rect x="570" y="200" width="80" height="50" rx="4" fill="#bbdefb" stroke="#4a5568" stroke-width="1.5"/>
+            <text x="610" y="230" text-anchor="middle" font-size="10" fill="#2d3748">阅读区</text>
+            <line x1="360" y1="410" x2="440" y2="410" stroke="#8B6914" stroke-width="4" stroke-dasharray="3,4"/>
+            <text x="400" y="435" text-anchor="middle" font-size="12" fill="#8B6914">入口</text>
+            <g transform="translate(740, 450)"><circle cx="0" cy="0" r="20" fill="white" stroke="#4a5568" stroke-width="1.5"/><polygon points="0,-15 -5,5 0,0 5,5" fill="#dc3545"/><polygon points="0,15 -5,-5 0,0 5,-5" fill="#ccc"/><text x="0" y="-22" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">N</text></g>
+        </svg>`,
+
+        stairwell: `<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+            <defs><pattern id="grid3" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="#e2e8f0" stroke-width="0.5"/></pattern></defs>
+            <rect width="800" height="500" fill="url(#grid3)"/>
+            <rect x="200" y="80" width="400" height="340" rx="8" fill="#efebe9" stroke="#4a5568" stroke-width="2.5"/>
+            <text x="400" y="130" text-anchor="middle" font-size="18" font-weight="bold" fill="#2d3748">楼梯间</text>
+            <text x="400" y="155" text-anchor="middle" font-size="12" fill="#718096">混凝土结构 · 信号衰减严重</text>
+            <rect x="280" y="190" width="240" height="30" fill="#d7ccc8" stroke="#8d6e63" stroke-width="1" rx="2"/>
+            <rect x="280" y="230" width="240" height="30" fill="#d7ccc8" stroke="#8d6e63" stroke-width="1" rx="2"/>
+            <rect x="280" y="270" width="240" height="30" fill="#d7ccc8" stroke="#8d6e63" stroke-width="1" rx="2"/>
+            <rect x="280" y="310" width="240" height="30" fill="#d7ccc8" stroke="#8d6e63" stroke-width="1" rx="2"/>
+            <rect x="280" y="350" width="240" height="30" fill="#d7ccc8" stroke="#8d6e63" stroke-width="1" rx="2"/>
+            <text x="400" y="290" text-anchor="middle" font-size="11" fill="#5d4037">楼梯台阶</text>
+            <rect x="220" y="190" width="40" height="190" fill="#bcaaa4" stroke="#8d6e63" stroke-width="1" rx="2"/>
+            <text x="240" y="290" text-anchor="middle" font-size="10" fill="white" transform="rotate(-90, 240, 290)">扶手</text>
+            <g transform="translate(740, 450)"><circle cx="0" cy="0" r="20" fill="white" stroke="#4a5568" stroke-width="1.5"/><polygon points="0,-15 -5,5 0,0 5,5" fill="#dc3545"/><polygon points="0,15 -5,-5 0,0 5,-5" fill="#ccc"/><text x="0" y="-22" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">N</text></g>
+        </svg>`
+    };
+
+    // ===== Render: Map =====
+    function renderMap() {
+        const data = getFilteredData();
+        const building = document.getElementById('buildingSelect').value;
+
+        // Stats
+        const statsGrid = document.getElementById('statsGrid');
+        const avgSignal = data.length > 0 ? Math.round(data.reduce((s, d) => s + d.signal, 0) / data.length) : 0;
+        const avgSpeed = data.length > 0 ? (data.reduce((s, d) => s + d.download, 0) / data.length).toFixed(1) : 0;
+        const maxSignal = data.length > 0 ? Math.max(...data.map(d => d.signal)) : 0;
+        const minSignal = data.length > 0 ? Math.min(...data.map(d => d.signal)) : 0;
+
+        statsGrid.innerHTML = `
+            <div class="stat-card"><div class="label">当前建筑点位数</div><div class="val">${data.length}</div></div>
+            <div class="stat-card"><div class="label">平均信号</div><div class="val">${avgSignal}<span class="unit"> dBm</span></div></div>
+            <div class="stat-card"><div class="label">平均下载速度</div><div class="val">${avgSpeed}<span class="unit"> Mbps</span></div></div>
+            <div class="stat-card"><div class="label">信号范围</div><div class="val" style="font-size:1.2em">${maxSignal} ~ ${minSignal}<span class="unit"> dBm</span></div></div>
+        `;
+
+        // Map
+        const container = document.getElementById('mapContainer');
+        container.innerHTML = FLOOR_PLANS[building] || '<div class="empty-state"><div class="icon">🏗️</div><p>暂无该楼层平面图</p></div>';
+
+        if (data.length > 0) {
+            const overlay = document.createElement('div');
+            overlay.className = 'map-overlay';
+
+            data.forEach(p => {
+                const cls = getSignalClass(p.signal);
+                const dot = document.createElement('div');
+                dot.className = `wifi-dot sig-${cls}`;
+                dot.style.left = p.x + '%';
+                dot.style.top = p.y + '%';
+                dot.innerHTML = `${p.id}<span class="dot-tip">${p.name} ${p.signal}dBm</span>`;
+                dot.onclick = () => showDetail(p);
+                overlay.appendChild(dot);
+            });
+
+            container.appendChild(overlay);
+        }
+
+        // Charts
+        renderBarChart('signalChart', data, 'signal', 100, true);
+        renderBarChart('speedChart', data, 'download', 100, false);
+        renderBarChart('latencyChart', data, 'latency', 70, false);
+    }
+
+    function renderBarChart(containerId, data, key, maxVal, isSignal) {
+        const chart = document.getElementById(containerId);
+        chart.innerHTML = '';
+
+        data.forEach(p => {
+            const val = p[key];
+            const group = document.createElement('div');
+            group.className = 'bar-group';
+
+            const bar = document.createElement('div');
+            bar.className = 'bar';
+            const pct = isSignal ? (Math.abs(val) / maxVal * 100) : (val / maxVal * 100);
+            bar.style.height = Math.min(pct, 100) + '%';
+
+            const color = isSignal ? getSigColor(getSignalClass(val)) : 'linear-gradient(to top, #667eea, #764ba2)';
+            bar.style.background = color;
+
+            bar.innerHTML = `<div class="bar-val">${val}</div>`;
+            bar.onclick = () => showDetail(p);
+
+            const label = document.createElement('div');
+            label.className = 'bar-lbl';
+            label.textContent = p.name.length > 6 ? p.name.substring(0, 6) + '..' : p.name;
+
+            group.appendChild(bar);
+            group.appendChild(label);
+            chart.appendChild(group);
+        });
+    }
+
+    // ===== Detail Modal =====
+    function showDetail(p) {
+        const cls = getSignalClass(p.signal);
+        const color = getSigColor(cls);
+        const modal = document.getElementById('detailModal');
+        const body = document.getElementById('modalBody');
+
+        telemetry.log('point_detail_view', { pointId: p.id, pointName: p.name, signal: p.signal });
+
+        body.innerHTML = `
+            <button class="modal-close" onclick="document.getElementById('detailModal').classList.remove('active')">&times;</button>
+            <h3>点位${p.id}：${p.name}</h3>
+            <div class="sub">${p.env} · ${getBuildingName(p.building)} · ${p.time || ''}</div>
+            <table class="detail-table">
+                <tr><td>信号强度</td><td><span class="sig-badge" style="background:${color}">${p.signal} dBm ${getSignalLabel(p.signal)}</span></td></tr>
+                <tr><td>延迟</td><td>${p.latency} ms</td></tr>
+                <tr><td>下载速度</td><td>${p.download} Mbps</td></tr>
+                <tr><td>上传速度</td><td>${p.upload} Mbps</td></tr>
+                <tr><td>地图坐标</td><td>X: ${p.x}% Y: ${p.y}%</td></tr>
+            </table>
+        `;
+        modal.classList.add('active');
+    }
+
+    document.getElementById('detailModal').onclick = function(e) {
+        if (e.target === this) this.classList.remove('active');
+    };
+
+    // ===== Data List =====
+    function renderDataList() {
+        const container = document.getElementById('dataListContainer');
+        const buildingFilter = document.getElementById('filterBuilding').value;
+        const signalFilter = document.getElementById('filterSignal').value;
+        const search = document.getElementById('filterSearch').value.toLowerCase();
+
+        let filtered = allData;
+        if (buildingFilter !== 'all') filtered = filtered.filter(d => d.building === buildingFilter);
+        if (signalFilter !== 'all') filtered = filtered.filter(d => getSignalClass(d.signal) === signalFilter);
+        if (search) filtered = filtered.filter(d => d.name.toLowerCase().includes(search) || (d.env && d.env.toLowerCase().includes(search)));
+
+        if (filtered.length === 0) {
+            container.innerHTML = '<div class="empty-state"><div class="icon">📭</div><p>暂无匹配的测量数据</p></div>';
+            return;
+        }
+
+        let html = `<table class="data-table">
+            <tr><th>#</th><th>位置</th><th>信号</th><th>延迟</th><th>下载</th><th>建筑</th><th></th></tr>`;
+
+        filtered.forEach(d => {
+            const cls = getSignalClass(d.signal);
+            const color = getSigColor(cls);
+            html += `<tr>
+                <td>${d.id}</td>
+                <td><strong>${d.name}</strong><br><span style="font-size:0.8em;color:var(--text-light)">${d.env || ''}</span></td>
+                <td><span class="sig-badge" style="background:${color}">${d.signal}</span></td>
+                <td>${d.latency}ms</td>
+                <td>${d.download}M</td>
+                <td style="font-size:0.8em">${getBuildingName(d.building)}</td>
+                <td><button class="delete-btn" onclick="deletePoint(${d.id})" title="删除">✕</button></td>
+            </tr>`;
+        });
+
+        html += '</table>';
+        container.innerHTML = html;
+    }
+
+    function deletePoint(id) {
+        if (!confirm('确定删除该测量点？')) return;
+        const point = allData.find(d => d.id === id);
+        allData = allData.filter(d => d.id !== id);
+        saveData(allData);
+        renderDataList();
+        telemetry.log('point_deleted', { pointId: id, pointName: point ? point.name : 'unknown' });
+        showToast('已删除');
+    }
+
+    // ===== Add Form =====
+    document.getElementById('addForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const point = {
+            id: getNextId(allData),
+            name: document.getElementById('fName').value.trim(),
+            env: document.getElementById('fEnv').value.trim(),
+            signal: parseInt(document.getElementById('fSignal').value),
+            latency: parseInt(document.getElementById('fLatency').value),
+            download: parseFloat(document.getElementById('fDownload').value),
+            upload: parseFloat(document.getElementById('fUpload').value),
+            x: parseInt(document.getElementById('fX').value) || 50,
+            y: parseInt(document.getElementById('fY').value) || 50,
+            building: document.getElementById('fBuilding').value,
+            time: new Date().toLocaleString('zh-CN')
+        };
+
+        allData.push(point);
+        saveData(allData);
+        this.reset();
+        telemetry.log('point_added', { pointId: point.id, pointName: point.name, signal: point.signal, building: point.building });
+        showToast('测量点已保存');
+    });
+
+    // ===== Heatmap =====
+    function renderHeatmap() {
+        const container = document.getElementById('heatmapContainer');
+        const building = document.getElementById('buildingSelect').value;
+        const data = allData.filter(d => d.building === building);
+
+        telemetry.log('heatmap_rendered', { building: building, dataPoints: data.length });
+
+        const W = 800, H = 500;
+        const canvas = document.createElement('canvas');
+        canvas.width = W;
+        canvas.height = H;
+        container.innerHTML = '';
+        container.appendChild(canvas);
+
+        const ctx = canvas.getContext('2d');
+
+        // Draw floor plan background
+        ctx.fillStyle = '#f7fafc';
+        ctx.fillRect(0, 0, W, H);
+
+        // Draw grid
+        ctx.strokeStyle = '#e2e8f0';
+        ctx.lineWidth = 0.5;
+        for (let x = 0; x < W; x += 20) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke(); }
+        for (let y = 0; y < H; y += 20) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke(); }
+
+        if (data.length === 0) {
+            ctx.fillStyle = '#718096';
+            ctx.font = '16px Microsoft YaHei';
+            ctx.textAlign = 'center';
+            ctx.fillText('当前建筑暂无测量数据', W / 2, H / 2);
+            return;
+        }
+
+        // Generate heatmap using inverse distance weighting
+        const resolution = 4;
+        for (let px = 0; px < W; px += resolution) {
+            for (let py = 0; py < H; py += resolution) {
+                let sumWeight = 0, sumVal = 0;
+
+                data.forEach(d => {
+                    const dx = px - (d.x / 100 * W);
+                    const dy = py - (d.y / 100 * H);
+                    const dist = Math.sqrt(dx * dx + dy * dy) + 1;
+                    const weight = 1 / (dist * dist);
+                    sumWeight += weight;
+                    sumVal += weight * d.signal;
+                });
+
+                const avg = sumVal / sumWeight;
+                const normalized = (avg + 100) / 80;
+                const clamped = Math.max(0, Math.min(1, normalized));
+
+                let r, g, b;
+                if (clamped < 0.33) {
+                    const t = clamped / 0.33;
+                    r = 220; g = Math.round(53 + t * 140); b = 69;
+                } else if (clamped < 0.66) {
+                    const t = (clamped - 0.33) / 0.33;
+                    r = Math.round(220 - t * 180); g = Math.round(193 + t * 8); b = Math.round(69 + t * 82);
+                } else {
+                    const t = (clamped - 0.66) / 0.34;
+                    r = Math.round(40 - t * 0); g = Math.round(201 - t * 36); b = Math.round(151 - t * 82);
+                }
+
+                ctx.fillStyle = `rgba(${r},${g},${b},0.45)`;
+                ctx.fillRect(px, py, resolution, resolution);
+            }
+        }
+
+        // Draw measurement points
+        data.forEach(d => {
+            const px = d.x / 100 * W;
+            const py = d.y / 100 * H;
+
+            ctx.beginPath();
+            ctx.arc(px, py, 12, 0, Math.PI * 2);
+            ctx.fillStyle = getSigColor(getSignalClass(d.signal));
+            ctx.fill();
+            ctx.strokeStyle = 'white';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 10px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(d.id, px, py);
+
+            ctx.fillStyle = '#333';
+            ctx.font = '10px Microsoft YaHei';
+            ctx.textAlign = 'center';
+            ctx.fillText(d.name, px, py + 22);
+        });
+    }
+
+    // ===== Export / Import =====
+    function exportCSV() {
+        const headers = 'ID,位置名称,环境,信号(dBm),延迟(ms),下载(Mbps),上传(Mbps),X(%),Y(%),建筑,时间\n';
+        const rows = allData.map(d =>
+            `${d.id},"${d.name}","${d.env || ''}",${d.signal},${d.latency},${d.download},${d.upload},${d.x},${d.y},"${d.building}","${d.time || ''}"`
+        ).join('\n');
+
+        downloadFile(headers + rows, 'wifi_data.csv', 'text/csv');
+        telemetry.log('data_exported_csv', { recordCount: allData.length });
+        showToast('CSV 已导出');
+    }
+
+    function exportJSON() {
+        downloadFile(JSON.stringify(allData, null, 2), 'wifi_data_backup.json', 'application/json');
+        telemetry.log('data_exported_json', { recordCount: allData.length });
+        showToast('JSON 备份已导出');
+    }
+
+    function downloadFile(content, filename, type) {
+        const blob = new Blob(['\ufeff' + content], { type: type + ';charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        a.click();
+        URL.revokeObjectURL(url);
+    }
+
+    function importCSV() {
+        document.getElementById('fileInput').click();
+    }
+
+    function handleFileImport(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            try {
+                if (file.name.endsWith('.json')) {
+                    const data = JSON.parse(e.target.result);
+                    if (Array.isArray(data)) {
+                        allData = data;
+                        saveData(allData);
+                        telemetry.log('data_imported_json', { recordCount: data.length });
+                        showToast(`已导入 ${data.length} 条数据`);
+                        renderMap();
+                    }
+                } else if (file.name.endsWith('.csv')) {
+                    const lines = e.target.result.split('\n').filter(l => l.trim());
+                    const imported = [];
+                    for (let i = 1; i < lines.length; i++) {
+                        const cols = lines[i].match(/(".*?"|[^,]+)/g).map(c => c.replace(/^"|"$/g, ''));
+                        if (cols.length >= 7) {
+                            imported.push({
+                                id: parseInt(cols[0]) || getNextId(allData.concat(imported)),
+                                name: cols[1],
+                                env: cols[2],
+                                signal: parseInt(cols[3]),
+                                latency: parseInt(cols[4]),
+                                download: parseFloat(cols[5]),
+                                upload: parseFloat(cols[6]),
+                                x: parseInt(cols[7]) || 50,
+                                y: parseInt(cols[8]) || 50,
+                                building: cols[9] || 'building_a',
+                                time: cols[10] || ''
+                            });
+                        }
+                    }
+                    if (imported.length > 0) {
+                        allData = imported;
+                        saveData(allData);
+                        telemetry.log('data_imported_csv', { recordCount: imported.length });
+                        showToast(`已导入 ${imported.length} 条数据`);
+                        renderMap();
+                    }
+                }
+            } catch (err) {
+                showToast('导入失败：文件格式错误');
+            }
+            event.target.value = '';
+        };
+        reader.readAsText(file);
+    }
+
+    function resetData() {
+        if (!confirm('确定重置所有数据？将恢复为初始的8个测量点。')) return;
+        allData = DEFAULT_DATA;
+        saveData(allData);
+        telemetry.log('data_reset', { restoredCount: DEFAULT_DATA.length });
+        showToast('数据已重置');
+        renderMap();
+    }
+
+    // ===== Building Switch =====
+    document.getElementById('buildingSelect').addEventListener('change', function() {
+        telemetry.log('building_switched', { building: this.value, buildingName: getBuildingName(this.value) });
+        renderMap();
+    });
+
+    // ===== Data Filter =====
+    function applyFilters() {
+        const buildingFilter = document.getElementById('filterBuilding').value;
+        const signalFilter = document.getElementById('filterSignal').value;
+        const search = document.getElementById('filterSearch').value.toLowerCase();
+        
+        telemetry.log('data_filtered', { building: buildingFilter, signal: signalFilter, search: search });
+        renderDataList();
+    }
+
+    // ===== Telemetry Logging System =====
+    const TELEMETRY_KEY = 'campus_wifi_telemetry';
+    
+    class TelemetryLogger {
+        constructor() {
+            this.sessionId = this.generateSessionId();
+            this.sessionStart = Date.now();
+            this.logs = this.loadLogs();
+            this.log('session_start', { sessionId: this.sessionId, userAgent: navigator.userAgent });
+            this.setupAutoSave();
+        }
+
+        generateSessionId() {
+            return 'sess_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+        }
+
+        loadLogs() {
+            const saved = localStorage.getItem(TELEMETRY_KEY);
+            return saved ? JSON.parse(saved) : [];
+        }
+
+        saveLogs() {
+            localStorage.setItem(TELEMETRY_KEY, JSON.stringify(this.logs));
+        }
+
+        log(eventType, data = {}) {
+            const entry = {
+                timestamp: new Date().toISOString(),
+                sessionId: this.sessionId,
+                event: eventType,
+                data: data
+            };
+            this.logs.push(entry);
+            this.saveLogs();
+            console.log('[Telemetry]', eventType, data);
+        }
+
+        setupAutoSave() {
+            // Save logs every 30 seconds
+            setInterval(() => this.saveLogs(), 30000);
+            
+            // Save on page unload
+            window.addEventListener('beforeunload', () => {
+                this.log('session_end', { duration: Date.now() - this.sessionStart });
+                this.saveLogs();
+            });
+        }
+
+        exportLogs() {
+            const content = JSON.stringify(this.logs, null, 2);
+            const date = new Date().toISOString().split('T')[0];
+            const filename = `telemetry_logs_${date}.json`;
+            
+            const blob = new Blob([content], { type: 'application/json;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            a.click();
+            URL.revokeObjectURL(url);
+            
+            this.log('telemetry_exported', { logCount: this.logs.length });
+        }
+
+        getTodayLogs() {
+            const today = new Date().toISOString().split('T')[0];
+            return this.logs.filter(l => l.timestamp.startsWith(today));
+        }
+
+        getStats() {
+            return {
+                totalLogs: this.logs.length,
+                todayLogs: this.getTodayLogs().length,
+                sessionId: this.sessionId,
+                sessionDuration: Math.round((Date.now() - this.sessionStart) / 1000)
+            };
+        }
+    }
+
+    const telemetry = new TelemetryLogger();
+
+    // ===== Init =====
+    renderMap();
+    telemetry.log('app_initialized', { dataPoints: allData.length });
+
+    // Update telemetry stats display
+    function updateTelemetryStats() {
+        const stats = telemetry.getStats();
+        const el = document.getElementById('telemetryStats');
+        if (el) {
+            el.textContent = `运行日志：共 ${stats.totalLogs} 条 | 今日 ${stats.todayLogs} 条 | 会话时长 ${stats.sessionDuration}s`;
+        }
+    }
+    updateTelemetryStats();
+    setInterval(updateTelemetryStats, 10000);
+
+    // ===== PWA Service Worker =====
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js').catch(() => {});
+    }
+    </script>
+</body>
+</html>
