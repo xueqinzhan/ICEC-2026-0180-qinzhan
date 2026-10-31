@@ -25,6 +25,15 @@
             --radius: 12px;
         }
 
+        [data-theme="dark"] {
+            --bg: #1a202c;
+            --card: #2d3748;
+            --text: #e2e8f0;
+            --text-light: #a0aec0;
+            --border: #4a5568;
+            --shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
@@ -33,6 +42,7 @@
             color: var(--text);
             min-height: 100vh;
             padding-bottom: 70px;
+            transition: background 0.3s, color 0.3s;
         }
 
         /* Header */
@@ -52,6 +62,29 @@
         .header-row {
             display: flex;
             justify-content: space-between;
+            align-items: center;
+        }
+
+        .theme-toggle {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.4);
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .theme-toggle:hover { background: rgba(255,255,255,0.3); }
+
+        .header-controls {
+            display: flex;
+            gap: 8px;
             align-items: center;
         }
 
@@ -474,11 +507,14 @@
                 <h1>校园WiFi信号地图</h1>
                 <p>ICEC 2026-0180 | 深圳城市职业学院</p>
             </div>
-            <select class="building-select" id="buildingSelect">
-                <option value="building_a">实训楼 4F</option>
-                <option value="canteen">食堂/图书馆</option>
-                <option value="stairwell">楼梯间</option>
-            </select>
+            <div class="header-controls">
+                <button class="theme-toggle" id="themeToggle" title="切换深色模式">🌙</button>
+                <select class="building-select" id="buildingSelect">
+                    <option value="building_a">实训楼 4F</option>
+                    <option value="canteen">食堂/图书馆</option>
+                    <option value="stairwell">楼梯间</option>
+                </select>
+            </div>
         </div>
     </div>
 
@@ -514,6 +550,12 @@
         <div class="card">
             <h2>延迟对比 (ms)</h2>
             <div class="bar-chart" id="latencyChart" style="height:160px;"></div>
+        </div>
+
+        <div class="card">
+            <h2>信号趋势</h2>
+            <p style="font-size:0.85em;color:var(--text-light);margin-bottom:12px;">各测量点信号强度变化趋势</p>
+            <canvas id="trendChart" width="800" height="300" style="width:100%;height:auto;"></canvas>
         </div>
     </div>
 
@@ -579,6 +621,7 @@
                 <button class="btn btn-secondary btn-sm" onclick="importCSV()">导入 CSV</button>
                 <button class="btn btn-secondary btn-sm" onclick="exportJSON()">导出 JSON 备份</button>
                 <button class="btn btn-secondary btn-sm" onclick="telemetry.exportLogs()">导出运行日志</button>
+                <button class="btn btn-secondary btn-sm" onclick="shareApp()">📤 分享应用</button>
                 <button class="btn btn-danger btn-sm" onclick="resetData()">重置所有数据</button>
             </div>
             <input type="file" id="fileInput" accept=".csv,.json" style="display:none" onchange="handleFileImport(event)">
@@ -720,6 +763,31 @@
     }
 
     let allData = loadData();
+
+    // ===== Theme Toggle =====
+    function initTheme() {
+        const saved = localStorage.getItem('campus_wifi_theme');
+        if (saved === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.getElementById('themeToggle').textContent = '☀️';
+        }
+    }
+
+    document.getElementById('themeToggle').addEventListener('click', function() {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        if (isDark) {
+            document.documentElement.removeAttribute('data-theme');
+            this.textContent = '🌙';
+            localStorage.setItem('campus_wifi_theme', 'light');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            this.textContent = '☀️';
+            localStorage.setItem('campus_wifi_theme', 'dark');
+        }
+        if (telemetry) telemetry.log('theme_toggle', { theme: isDark ? 'light' : 'dark' });
+    });
+
+    initTheme();
 
     // ===== Utility =====
     function getSignalClass(s) {
@@ -893,6 +961,75 @@
         renderBarChart('signalChart', data, 'signal', 100, true);
         renderBarChart('speedChart', data, 'download', 100, false);
         renderBarChart('latencyChart', data, 'latency', 70, false);
+        renderTrendChart(data);
+    }
+
+    function renderTrendChart(data) {
+        const canvas = document.getElementById('trendChart');
+        const ctx = canvas.getContext('2d');
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        if (data.length === 0) return;
+        
+        const padding = 50;
+        const chartWidth = canvas.width - padding * 2;
+        const chartHeight = canvas.height - padding * 2;
+        
+        const minSignal = Math.min(...data.map(d => d.signal));
+        const maxSignal = Math.max(...data.map(d => d.signal));
+        const signalRange = maxSignal - minSignal || 10;
+        
+        // Draw grid
+        ctx.strokeStyle = isDark ? '#4a5568' : '#e2e8f0';
+        ctx.lineWidth = 1;
+        for (let i = 0; i <= 4; i++) {
+            const y = padding + (chartHeight / 4) * i;
+            ctx.beginPath();
+            ctx.moveTo(padding, y);
+            ctx.lineTo(canvas.width - padding, y);
+            ctx.stroke();
+            
+            // Y-axis labels
+            const val = Math.round(maxSignal - (signalRange / 4) * i);
+            ctx.fillStyle = isDark ? '#a0aec0' : '#718096';
+            ctx.font = '12px sans-serif';
+            ctx.textAlign = 'right';
+            ctx.fillText(val + 'dBm', padding - 8, y + 4);
+        }
+        
+        // Draw line
+        ctx.strokeStyle = '#667eea';
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        
+        data.forEach((point, i) => {
+            const x = padding + (chartWidth / (data.length - 1 || 1)) * i;
+            const y = padding + chartHeight - ((point.signal - minSignal) / signalRange) * chartHeight;
+            
+            if (i === 0) ctx.moveTo(x, y);
+            else ctx.lineTo(x, y);
+        });
+        ctx.stroke();
+        
+        // Draw points
+        data.forEach((point, i) => {
+            const x = padding + (chartWidth / (data.length - 1 || 1)) * i;
+            const y = padding + chartHeight - ((point.signal - minSignal) / signalRange) * chartHeight;
+            
+            ctx.fillStyle = getSigColor(getSignalClass(point.signal));
+            ctx.beginPath();
+            ctx.arc(x, y, 6, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // X-axis labels
+            ctx.fillStyle = isDark ? '#a0aec0' : '#718096';
+            ctx.font = '10px sans-serif';
+            ctx.textAlign = 'center';
+            const label = point.name.length > 6 ? point.name.substring(0, 6) + '...' : point.name;
+            ctx.fillText(label, x, canvas.height - 10);
+        });
     }
 
     function renderBarChart(containerId, data, key, maxVal, isSignal) {
@@ -1124,6 +1261,26 @@
     }
 
     // ===== Export / Import =====
+    function shareApp() {
+        const url = 'https://xueqinzhan.github.io/ICEC-2026-0180-qinzhan/';
+        const text = `📡 校园WiFi信号地图\n\n快来查看校园各区域的WiFi信号覆盖情况！\n\n🔗 ${url}\n\nICEC 2026 项目四作品`;
+        
+        if (navigator.share) {
+            navigator.share({
+                title: '校园WiFi信号地图',
+                text: text,
+                url: url
+            }).catch(() => {});
+        } else {
+            navigator.clipboard.writeText(text).then(() => {
+                showToast('分享文案已复制到剪贴板');
+            }).catch(() => {
+                prompt('复制以下文案分享：', text);
+            });
+        }
+        telemetry.log('app_shared', { method: navigator.share ? 'native' : 'clipboard' });
+    }
+
     function exportCSV() {
         const headers = 'ID,位置名称,环境,信号(dBm),延迟(ms),下载(Mbps),上传(Mbps),X(%),Y(%),建筑,时间\n';
         const rows = allData.map(d =>
