@@ -1,0 +1,171 @@
+[
+  {
+    "timestamp": "2026-10-24T01:41:20.905Z",
+    "sessionId": "sess_1792806080905_38yiwmpl4",
+    "event": "session_start",
+    "data": {
+      "sessionId": "sess_1792806080905_38yiwmpl4",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 NetType/WIFI MicroMessenger/7.0.20.1781(0x6700143B) WindowsWechat(0x63090a13) UnifiedPCWindowsWechat(0xf2541f37) XWEB/26504 Flue"
+    }
+  },
+  {
+    "timestamp": "2026-10-24T01:41:20.906Z",
+    "sessionId": "sess_1792806080905_38yiwmpl4",
+    "event": "app_initialized",
+    "data": {
+      "dataPoints": 8
+    }
+  },
+  {
+    "timestamp": "2026-10-24T01:41:29.998Z",
+    "sessionId": "sess_1792806080905_38yiwmpl4",
+    "event": "point_detail_view",
+    "data": {
+      "pointId": 3,
+      "pointName": "实训楼门口",
+      "signal": -63
+    }
+  },
+  {
+    "timestamp": "2026-10-24T01:41:32.608Z",
+    "sessionId": "sess_1792806080905_38yiwmpl4",
+    "event": "tab_switch",
+    "data": {
+      "tab": "pageHeat"
+    }
+  },
+  {
+    "timestamp": "2026-10-24T01:41:32.608Z",
+    "sessionId": "sess_1792806080905_38yiwmpl4",
+    "event": "heatmap_rendered",
+    "data": {
+      "building": "building_a",
+      "dataPoints": 6
+    }
+  },
+  {
+    "timestamp": "2026-10-24T01:41:32.855Z",
+    "sessionId": "sess_1792806080905_38yiwmpl4",
+    "event": "tab_switch",
+    "data": {
+      "tab": "pageHeat"
+    }
+  },
+  {
+    "timestamp": "2026-10-24T01:41:32.855Z",
+    "sessionId": "sess_1792806080905_38yiwmpl4",
+    "event": "heatmap_rendered",
+    "data": {
+      "building": "building_a",
+      "dataPoints": 6
+    }
+  },
+  {
+    "timestamp": "2026-10-24T01:41:33.359Z",
+    "sessionId": "sess_1792806080905_38yiwmpl4",
+    "event": "tab_switch",
+    "data": {
+      "tab": "pageData"
+    }
+  },
+  {
+    "timestamp": "2026-10-24T01:41:33.991Z",
+    "sessionId": "sess_1792806080905_38yiwmpl4",
+    "event": "tab_switch",
+    "data": {
+      "tab": "pageAdd"
+    }
+  },
+  {
+    "timestamp": "2026-10-24T01:41:34.539Z",
+    "sessionId": "sess_1792806080905_38yiwmpl4",
+    "event": "tab_switch",
+    "data": {
+      "tab": "pageData"
+    }
+  },
+  {
+    "timestamp": "2026-10-24T01:41:36.448Z",
+    "sessionId": "sess_1792806080905_38yiwmpl4",
+    "event": "tab_switch",
+    "data": {
+      "tab": "pageAbout"
+    }
+  },
+  {
+    "timestamp": "2026-10-24T01:41:36.991Z",
+    "sessionId": "sess_1792806080905_38yiwmpl4",
+    "event": "tab_switch",
+    "data": {
+      "tab": "pageAdd"
+    }
+  },
+  {
+    "timestamp": "2026-10-24T01:41:37.223Z",
+    "sessionId": "sess_1792806080905_38yiwmpl4",
+    "event": "tab_switch",
+    "data": {
+      "tab": "pageMap"
+    }
+  },
+  {
+    "timestamp": "2026-10-24T01:41:37.403Z",
+    "sessionId": "sess_1792806080905_38yiwmpl4",
+    "event": "tab_switch",
+    "data": {
+      "tab": "pageMap"
+    }
+  },
+  {
+    "timestamp": "2026-10-24T01:41:37.580Z",
+    "sessionId": "sess_1792806080905_38yiwmpl4",
+    "event": "tab_switch",
+    "data": {
+      "tab": "pageMap"
+    }
+  },
+  {
+    "timestamp": "2026-10-24T01:41:37.715Z",
+    "sessionId": "sess_1792806080905_38yiwmpl4",
+    "event": "tab_switch",
+    "data": {
+      "tab": "pageMap"
+    }
+  },
+  {
+    "timestamp": "2026-10-24T01:41:40.794Z",
+    "sessionId": "sess_1792806080905_38yiwmpl4",
+    "event": "point_detail_view",
+    "data": {
+      "pointId": 7,
+      "pointName": "数据机房",
+      "signal": -82
+    }
+  },
+  {
+    "timestamp": "2026-10-24T01:42:21.687Z",
+    "sessionId": "sess_1792806080905_38yiwmpl4",
+    "event": "point_detail_view",
+    "data": {
+      "pointId": 5,
+      "pointName": "走廊靠墙角落",
+      "signal": -65
+    }
+  },
+  {
+    "timestamp": "2026-10-24T01:42:25.227Z",
+    "sessionId": "sess_1792806080905_38yiwmpl4",
+    "event": "tab_switch",
+    "data": {
+      "tab": "pageAdd"
+    }
+  },
+  {
+    "timestamp": "2026-10-24T01:42:36.804Z",
+    "sessionId": "sess_1792806080905_38yiwmpl4",
+    "event": "data_exported_csv",
+    "data": {
+      "recordCount": 8
+    }
+  }
+]

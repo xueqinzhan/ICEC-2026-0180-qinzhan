@@ -1,0 +1,52 @@
+[
+  {
+    "timestamp": "2026-10-24T03:52:43.338Z",
+    "sessionId": "sess_1792813963335_unnxoo3t0",
+    "event": "session_start",
+    "data": {
+      "sessionId": "sess_1792813963335_unnxoo3t0",
+      "userAgent": "Mozilla/5.0 (Linux; Android 12; HarmonyOS; BRE-AL00b; HMSCore 6.16.4.352) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6834.79 HuaweiBrowser/17.0.8.310 Mobile Safari/537.36"
+    }
+  },
+  {
+    "timestamp": "2026-10-24T03:52:43.347Z",
+    "sessionId": "sess_1792813963335_unnxoo3t0",
+    "event": "app_initialized",
+    "data": {
+      "dataPoints": 8
+    }
+  },
+  {
+    "timestamp": "2026-10-24T03:52:43.859Z",
+    "sessionId": "sess_1792813963335_unnxoo3t0",
+    "event": "session_end",
+    "data": {
+      "duration": 524
+    }
+  },
+  {
+    "timestamp": "2026-10-24T03:52:45.232Z",
+    "sessionId": "sess_1792813965232_wdet5oyez",
+    "event": "session_start",
+    "data": {
+      "sessionId": "sess_1792813965232_wdet5oyez",
+      "userAgent": "Mozilla/5.0 (Linux; Android 12; HarmonyOS; BRE-AL00b; HMSCore 6.16.4.352) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6834.79 HuaweiBrowser/17.0.8.310 Mobile Safari/537.36"
+    }
+  },
+  {
+    "timestamp": "2026-10-24T03:52:45.235Z",
+    "sessionId": "sess_1792813965232_wdet5oyez",
+    "event": "app_initialized",
+    "data": {
+      "dataPoints": 8
+    }
+  },
+  {
+    "timestamp": "2026-10-24T03:52:45.753Z",
+    "sessionId": "sess_1792813965232_wdet5oyez",
+    "event": "tab_switch",
+    "data": {
+      "tab": "pageAdd"
+    }
+  }
+]

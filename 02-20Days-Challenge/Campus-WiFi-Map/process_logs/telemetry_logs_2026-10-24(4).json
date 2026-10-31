@@ -1,0 +1,27 @@
+[
+  {
+    "timestamp": "2026-10-24T03:55:21.536Z",
+    "sessionId": "sess_1792814121536_uwa4o3f1d",
+    "event": "session_start",
+    "data": {
+      "sessionId": "sess_1792814121536_uwa4o3f1d",
+      "userAgent": "Mozilla/5.0 (Linux; Android 16; V2536A Build/BP2A.250605.031.A3_V000L1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.7680.178 Mobile Safari/537.36 VivoBrowser/31.2.3.1"
+    }
+  },
+  {
+    "timestamp": "2026-10-24T03:55:21.539Z",
+    "sessionId": "sess_1792814121536_uwa4o3f1d",
+    "event": "app_initialized",
+    "data": {
+      "dataPoints": 8
+    }
+  },
+  {
+    "timestamp": "2026-10-24T03:55:29.019Z",
+    "sessionId": "sess_1792814121536_uwa4o3f1d",
+    "event": "tab_switch",
+    "data": {
+      "tab": "pageAdd"
+    }
+  }
+]

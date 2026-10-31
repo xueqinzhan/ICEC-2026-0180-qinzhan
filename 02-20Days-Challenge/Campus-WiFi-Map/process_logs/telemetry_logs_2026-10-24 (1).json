@@ -1,0 +1,124 @@
+[
+  {
+    "timestamp": "2026-10-23T23:56:57.203Z",
+    "sessionId": "sess_1792799817203_nlwf4z3vf",
+    "event": "session_start",
+    "data": {
+      "sessionId": "sess_1792799817203_nlwf4z3vf",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0"
+    }
+  },
+  {
+    "timestamp": "2026-10-23T23:56:57.205Z",
+    "sessionId": "sess_1792799817203_nlwf4z3vf",
+    "event": "app_initialized",
+    "data": {
+      "dataPoints": 8
+    }
+  },
+  {
+    "timestamp": "2026-10-23T23:57:29.331Z",
+    "sessionId": "sess_1792799817203_nlwf4z3vf",
+    "event": "tab_switch",
+    "data": {
+      "tab": "pageAdd"
+    }
+  },
+  {
+    "timestamp": "2026-10-23T23:57:39.350Z",
+    "sessionId": "sess_1792799817203_nlwf4z3vf",
+    "event": "tab_switch",
+    "data": {
+      "tab": "pageData"
+    }
+  },
+  {
+    "timestamp": "2026-10-23T23:57:41.458Z",
+    "sessionId": "sess_1792799817203_nlwf4z3vf",
+    "event": "tab_switch",
+    "data": {
+      "tab": "pageHeat"
+    }
+  },
+  {
+    "timestamp": "2026-10-23T23:57:41.458Z",
+    "sessionId": "sess_1792799817203_nlwf4z3vf",
+    "event": "heatmap_rendered",
+    "data": {
+      "building": "building_a",
+      "dataPoints": 6
+    }
+  },
+  {
+    "timestamp": "2026-10-23T23:57:43.087Z",
+    "sessionId": "sess_1792799817203_nlwf4z3vf",
+    "event": "tab_switch",
+    "data": {
+      "tab": "pageAbout"
+    }
+  },
+  {
+    "timestamp": "2026-10-23T23:57:44.225Z",
+    "sessionId": "sess_1792799817203_nlwf4z3vf",
+    "event": "tab_switch",
+    "data": {
+      "tab": "pageAdd"
+    }
+  },
+  {
+    "timestamp": "2026-10-24T00:00:26.226Z",
+    "sessionId": "sess_1792799817203_nlwf4z3vf",
+    "event": "telemetry_exported",
+    "data": {
+      "logCount": 8
+    }
+  },
+  {
+    "timestamp": "2026-10-24T00:00:47.005Z",
+    "sessionId": "sess_1792799817203_nlwf4z3vf",
+    "event": "tab_switch",
+    "data": {
+      "tab": "pageMap"
+    }
+  },
+  {
+    "timestamp": "2026-10-24T00:00:48.282Z",
+    "sessionId": "sess_1792799817203_nlwf4z3vf",
+    "event": "tab_switch",
+    "data": {
+      "tab": "pageData"
+    }
+  },
+  {
+    "timestamp": "2026-10-24T00:00:56.793Z",
+    "sessionId": "sess_1792799817203_nlwf4z3vf",
+    "event": "tab_switch",
+    "data": {
+      "tab": "pageAdd"
+    }
+  },
+  {
+    "timestamp": "2026-10-24T00:01:03.471Z",
+    "sessionId": "sess_1792799817203_nlwf4z3vf",
+    "event": "telemetry_exported",
+    "data": {
+      "logCount": 12
+    }
+  },
+  {
+    "timestamp": "2026-10-24T00:02:44.607Z",
+    "sessionId": "sess_1792799817203_nlwf4z3vf",
+    "event": "telemetry_exported",
+    "data": {
+      "logCount": 13
+    }
+  },
+  {
+    "timestamp": "2026-10-24T00:02:49.917Z",
+    "sessionId": "sess_1792799817203_nlwf4z3vf",
+    "event": "telemetry_exported",
+    "data": {
+      "logCount": 14
+    }
+  }
+]
