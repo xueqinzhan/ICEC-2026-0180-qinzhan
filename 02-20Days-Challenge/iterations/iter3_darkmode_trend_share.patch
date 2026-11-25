@@ -1,0 +1,3986 @@
+diff --git a/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-24 (1).json b/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-24 (1).json
+new file mode 100644
+index 0000000..8eac805
+--- /dev/null
++++ b/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-24 (1).json	
+@@ -0,0 +1,124 @@
++[
++  {
++    "timestamp": "2026-10-23T23:56:57.203Z",
++    "sessionId": "sess_1792799817203_nlwf4z3vf",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1792799817203_nlwf4z3vf",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-23T23:56:57.205Z",
++    "sessionId": "sess_1792799817203_nlwf4z3vf",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-23T23:57:29.331Z",
++    "sessionId": "sess_1792799817203_nlwf4z3vf",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-23T23:57:39.350Z",
++    "sessionId": "sess_1792799817203_nlwf4z3vf",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-23T23:57:41.458Z",
++    "sessionId": "sess_1792799817203_nlwf4z3vf",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-23T23:57:41.458Z",
++    "sessionId": "sess_1792799817203_nlwf4z3vf",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-23T23:57:43.087Z",
++    "sessionId": "sess_1792799817203_nlwf4z3vf",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAbout"
++    }
++  },
++  {
++    "timestamp": "2026-10-23T23:57:44.225Z",
++    "sessionId": "sess_1792799817203_nlwf4z3vf",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T00:00:26.226Z",
++    "sessionId": "sess_1792799817203_nlwf4z3vf",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-24T00:00:47.005Z",
++    "sessionId": "sess_1792799817203_nlwf4z3vf",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageMap"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T00:00:48.282Z",
++    "sessionId": "sess_1792799817203_nlwf4z3vf",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T00:00:56.793Z",
++    "sessionId": "sess_1792799817203_nlwf4z3vf",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T00:01:03.471Z",
++    "sessionId": "sess_1792799817203_nlwf4z3vf",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 12
++    }
++  },
++  {
++    "timestamp": "2026-10-24T00:02:44.607Z",
++    "sessionId": "sess_1792799817203_nlwf4z3vf",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 13
++    }
++  },
++  {
++    "timestamp": "2026-10-24T00:02:49.917Z",
++    "sessionId": "sess_1792799817203_nlwf4z3vf",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 14
++    }
++  }
++]
+\ No newline at end of file
+diff --git a/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-24(1).json b/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-24(1).json
+new file mode 100644
+index 0000000..d1d0ff9
+--- /dev/null
++++ b/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-24(1).json
+@@ -0,0 +1,27 @@
++[
++  {
++    "timestamp": "2026-10-24T01:52:24.900Z",
++    "sessionId": "sess_1792806744900_l0233p97c",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1792806744900_l0233p97c",
++      "userAgent": "Mozilla/5.0 (Linux; U; Android 16; zh-cn; PKX110 Build/AP3A.240617.008) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/115.0.5790.168 Mobile Safari/537.36 HeyTapBrowser/40.10.23.1"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T01:52:24.903Z",
++    "sessionId": "sess_1792806744900_l0233p97c",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-24T01:52:26.514Z",
++    "sessionId": "sess_1792806744900_l0233p97c",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  }
++]
+\ No newline at end of file
+diff --git a/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-24(2).json b/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-24(2).json
+new file mode 100644
+index 0000000..ab79a23
+--- /dev/null
++++ b/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-24(2).json
+@@ -0,0 +1,37 @@
++[
++  {
++    "timestamp": "2026-10-24T01:49:55.816Z",
++    "sessionId": "sess_1792806595816_qr8indepd",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1792806595816_qr8indepd",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 NetType/WIFI MicroMessenger/7.0.20.1781(0x6700143B) WindowsWechat(0x63090a13) UnifiedPCWindowsWechat(0xf2541f38) XWEB/25799 Flue"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T01:49:55.819Z",
++    "sessionId": "sess_1792806595816_qr8indepd",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:03:22.152Z",
++    "sessionId": "sess_1792806595816_qr8indepd",
++    "event": "point_detail_view",
++    "data": {
++      "pointId": 4,
++      "pointName": "走廊靠窗角落",
++      "signal": -50
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:05:08.281Z",
++    "sessionId": "sess_1792806595816_qr8indepd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  }
++]
+\ No newline at end of file
+diff --git a/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-24(3).json b/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-24(3).json
+new file mode 100644
+index 0000000..a2ea9de
+--- /dev/null
++++ b/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-24(3).json
+@@ -0,0 +1,52 @@
++[
++  {
++    "timestamp": "2026-10-24T03:52:43.338Z",
++    "sessionId": "sess_1792813963335_unnxoo3t0",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1792813963335_unnxoo3t0",
++      "userAgent": "Mozilla/5.0 (Linux; Android 12; HarmonyOS; BRE-AL00b; HMSCore 6.16.4.352) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6834.79 HuaweiBrowser/17.0.8.310 Mobile Safari/537.36"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T03:52:43.347Z",
++    "sessionId": "sess_1792813963335_unnxoo3t0",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-24T03:52:43.859Z",
++    "sessionId": "sess_1792813963335_unnxoo3t0",
++    "event": "session_end",
++    "data": {
++      "duration": 524
++    }
++  },
++  {
++    "timestamp": "2026-10-24T03:52:45.232Z",
++    "sessionId": "sess_1792813965232_wdet5oyez",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1792813965232_wdet5oyez",
++      "userAgent": "Mozilla/5.0 (Linux; Android 12; HarmonyOS; BRE-AL00b; HMSCore 6.16.4.352) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6834.79 HuaweiBrowser/17.0.8.310 Mobile Safari/537.36"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T03:52:45.235Z",
++    "sessionId": "sess_1792813965232_wdet5oyez",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-24T03:52:45.753Z",
++    "sessionId": "sess_1792813965232_wdet5oyez",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  }
++]
+\ No newline at end of file
+diff --git a/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-24(4).json b/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-24(4).json
+new file mode 100644
+index 0000000..3f15db0
+--- /dev/null
++++ b/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-24(4).json
+@@ -0,0 +1,27 @@
++[
++  {
++    "timestamp": "2026-10-24T03:55:21.536Z",
++    "sessionId": "sess_1792814121536_uwa4o3f1d",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1792814121536_uwa4o3f1d",
++      "userAgent": "Mozilla/5.0 (Linux; Android 16; V2536A Build/BP2A.250605.031.A3_V000L1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.7680.178 Mobile Safari/537.36 VivoBrowser/31.2.3.1"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T03:55:21.539Z",
++    "sessionId": "sess_1792814121536_uwa4o3f1d",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-24T03:55:29.019Z",
++    "sessionId": "sess_1792814121536_uwa4o3f1d",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  }
++]
+\ No newline at end of file
+diff --git a/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-24.json b/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-24.json
+new file mode 100644
+index 0000000..a636da0
+--- /dev/null
++++ b/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-24.json
+@@ -0,0 +1,171 @@
++[
++  {
++    "timestamp": "2026-10-24T01:41:20.905Z",
++    "sessionId": "sess_1792806080905_38yiwmpl4",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1792806080905_38yiwmpl4",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 NetType/WIFI MicroMessenger/7.0.20.1781(0x6700143B) WindowsWechat(0x63090a13) UnifiedPCWindowsWechat(0xf2541f37) XWEB/26504 Flue"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T01:41:20.906Z",
++    "sessionId": "sess_1792806080905_38yiwmpl4",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-24T01:41:29.998Z",
++    "sessionId": "sess_1792806080905_38yiwmpl4",
++    "event": "point_detail_view",
++    "data": {
++      "pointId": 3,
++      "pointName": "实训楼门口",
++      "signal": -63
++    }
++  },
++  {
++    "timestamp": "2026-10-24T01:41:32.608Z",
++    "sessionId": "sess_1792806080905_38yiwmpl4",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T01:41:32.608Z",
++    "sessionId": "sess_1792806080905_38yiwmpl4",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-24T01:41:32.855Z",
++    "sessionId": "sess_1792806080905_38yiwmpl4",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T01:41:32.855Z",
++    "sessionId": "sess_1792806080905_38yiwmpl4",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-24T01:41:33.359Z",
++    "sessionId": "sess_1792806080905_38yiwmpl4",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T01:41:33.991Z",
++    "sessionId": "sess_1792806080905_38yiwmpl4",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T01:41:34.539Z",
++    "sessionId": "sess_1792806080905_38yiwmpl4",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T01:41:36.448Z",
++    "sessionId": "sess_1792806080905_38yiwmpl4",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAbout"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T01:41:36.991Z",
++    "sessionId": "sess_1792806080905_38yiwmpl4",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T01:41:37.223Z",
++    "sessionId": "sess_1792806080905_38yiwmpl4",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageMap"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T01:41:37.403Z",
++    "sessionId": "sess_1792806080905_38yiwmpl4",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageMap"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T01:41:37.580Z",
++    "sessionId": "sess_1792806080905_38yiwmpl4",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageMap"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T01:41:37.715Z",
++    "sessionId": "sess_1792806080905_38yiwmpl4",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageMap"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T01:41:40.794Z",
++    "sessionId": "sess_1792806080905_38yiwmpl4",
++    "event": "point_detail_view",
++    "data": {
++      "pointId": 7,
++      "pointName": "数据机房",
++      "signal": -82
++    }
++  },
++  {
++    "timestamp": "2026-10-24T01:42:21.687Z",
++    "sessionId": "sess_1792806080905_38yiwmpl4",
++    "event": "point_detail_view",
++    "data": {
++      "pointId": 5,
++      "pointName": "走廊靠墙角落",
++      "signal": -65
++    }
++  },
++  {
++    "timestamp": "2026-10-24T01:42:25.227Z",
++    "sessionId": "sess_1792806080905_38yiwmpl4",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T01:42:36.804Z",
++    "sessionId": "sess_1792806080905_38yiwmpl4",
++    "event": "data_exported_csv",
++    "data": {
++      "recordCount": 8
++    }
++  }
++]
+\ No newline at end of file
+diff --git a/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-25.json b/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-25.json
+new file mode 100644
+index 0000000..4d244a2
+--- /dev/null
++++ b/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-25.json
+@@ -0,0 +1,305 @@
++[
++  {
++    "timestamp": "2026-10-24T00:36:30.977Z",
++    "sessionId": "sess_1792802190977_k34xwdpay",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1792802190977_k34xwdpay",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T00:36:30.979Z",
++    "sessionId": "sess_1792802190977_k34xwdpay",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-24T00:36:31.772Z",
++    "sessionId": "sess_1792802190977_k34xwdpay",
++    "event": "session_end",
++    "data": {
++      "duration": 795
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:09.301Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1792807749301_rfgqo6ntq",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:09.303Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:13.073Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:14.355Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:14.355Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:17.159Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAbout"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:17.962Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:19.349Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:22.734Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 11
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:28.303Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "session_end",
++    "data": {
++      "duration": 19002
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:10:58.230Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1792807858229_poc7q1v85",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:10:58.231Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:03.729Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:05.238Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:05.238Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:05.704Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAbout"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:08.040Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:12.032Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 20
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:47.963Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 21
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:12:29.063Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 22
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:12:50.496Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "session_end",
++    "data": {
++      "duration": 112267
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:51:53.604Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1792893113603_3wqotoopd",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:51:53.606Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:51:58.047Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:51:58.048Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:51:59.996Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAbout"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:00.994Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:02.869Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:03.574Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageMap"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:04.069Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:06.026Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:08.211Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:09.393Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageMap"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:14.780Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  }
++]
+\ No newline at end of file
+diff --git a/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-26.json b/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-26.json
+new file mode 100644
+index 0000000..66e4494
+--- /dev/null
++++ b/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-26.json
+@@ -0,0 +1,379 @@
++[
++  {
++    "timestamp": "2026-10-24T00:36:30.977Z",
++    "sessionId": "sess_1792802190977_k34xwdpay",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1792802190977_k34xwdpay",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T00:36:30.979Z",
++    "sessionId": "sess_1792802190977_k34xwdpay",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-24T00:36:31.772Z",
++    "sessionId": "sess_1792802190977_k34xwdpay",
++    "event": "session_end",
++    "data": {
++      "duration": 795
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:09.301Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1792807749301_rfgqo6ntq",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:09.303Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:13.073Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:14.355Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:14.355Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:17.159Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAbout"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:17.962Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:19.349Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:22.734Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 11
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:28.303Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "session_end",
++    "data": {
++      "duration": 19002
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:10:58.230Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1792807858229_poc7q1v85",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:10:58.231Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:03.729Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:05.238Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:05.238Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:05.704Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAbout"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:08.040Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:12.032Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 20
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:47.963Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 21
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:12:29.063Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 22
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:12:50.496Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "session_end",
++    "data": {
++      "duration": 112267
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:51:53.604Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1792893113603_3wqotoopd",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:51:53.606Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:51:58.047Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:51:58.048Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:51:59.996Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAbout"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:00.994Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:02.869Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:03.574Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageMap"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:04.069Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:06.026Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:08.211Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:09.393Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageMap"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:14.780Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:15.966Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 37
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:54:25.789Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "session_end",
++    "data": {
++      "duration": 152186
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:43.091Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1793004883090_2putaljf0",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:43.092Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:45.436Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:45.436Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:47.662Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAbout"
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:49.909Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:54.301Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  }
++]
+\ No newline at end of file
+diff --git a/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-28.json b/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-28.json
+new file mode 100644
+index 0000000..91f32e9
+--- /dev/null
++++ b/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-28.json
+@@ -0,0 +1,478 @@
++[
++  {
++    "timestamp": "2026-10-24T00:36:30.977Z",
++    "sessionId": "sess_1792802190977_k34xwdpay",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1792802190977_k34xwdpay",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T00:36:30.979Z",
++    "sessionId": "sess_1792802190977_k34xwdpay",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-24T00:36:31.772Z",
++    "sessionId": "sess_1792802190977_k34xwdpay",
++    "event": "session_end",
++    "data": {
++      "duration": 795
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:09.301Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1792807749301_rfgqo6ntq",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:09.303Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:13.073Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:14.355Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:14.355Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:17.159Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAbout"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:17.962Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:19.349Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:22.734Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 11
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:28.303Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "session_end",
++    "data": {
++      "duration": 19002
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:10:58.230Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1792807858229_poc7q1v85",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:10:58.231Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:03.729Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:05.238Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:05.238Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:05.704Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAbout"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:08.040Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:12.032Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 20
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:47.963Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 21
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:12:29.063Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 22
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:12:50.496Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "session_end",
++    "data": {
++      "duration": 112267
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:51:53.604Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1792893113603_3wqotoopd",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:51:53.606Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:51:58.047Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:51:58.048Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:51:59.996Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAbout"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:00.994Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:02.869Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:03.574Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageMap"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:04.069Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:06.026Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:08.211Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:09.393Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageMap"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:14.780Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:15.966Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 37
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:54:25.789Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "session_end",
++    "data": {
++      "duration": 152186
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:43.091Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1793004883090_2putaljf0",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:43.092Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:45.436Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:45.436Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:47.662Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAbout"
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:49.909Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:54.301Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:56.971Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 46
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:55:48.516Z",
++    "sessionId": "sess_1793004948516_sc2e5uq15",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1793004948516_sc2e5uq15",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:55:48.518Z",
++    "sessionId": "sess_1793004948516_sc2e5uq15",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:58:28.982Z",
++    "sessionId": "sess_1793004948516_sc2e5uq15",
++    "event": "session_end",
++    "data": {
++      "duration": 160466
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:35:36.914Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1793183736914_ztdld0m09",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:35:36.915Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:35:38.723Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:35:38.724Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:35:43.125Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAbout"
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:35:44.355Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:35:45.480Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageMap"
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:35:47.775Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  }
++]
+\ No newline at end of file
+diff --git a/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-29.json b/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-29.json
+new file mode 100644
+index 0000000..10548c0
+--- /dev/null
++++ b/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-29.json
+@@ -0,0 +1,569 @@
++[
++  {
++    "timestamp": "2026-10-24T00:36:30.977Z",
++    "sessionId": "sess_1792802190977_k34xwdpay",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1792802190977_k34xwdpay",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T00:36:30.979Z",
++    "sessionId": "sess_1792802190977_k34xwdpay",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-24T00:36:31.772Z",
++    "sessionId": "sess_1792802190977_k34xwdpay",
++    "event": "session_end",
++    "data": {
++      "duration": 795
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:09.301Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1792807749301_rfgqo6ntq",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:09.303Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:13.073Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:14.355Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:14.355Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:17.159Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAbout"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:17.962Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:19.349Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:22.734Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 11
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:28.303Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "session_end",
++    "data": {
++      "duration": 19002
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:10:58.230Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1792807858229_poc7q1v85",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:10:58.231Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:03.729Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:05.238Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:05.238Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:05.704Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAbout"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:08.040Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:12.032Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 20
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:47.963Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 21
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:12:29.063Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 22
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:12:50.496Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "session_end",
++    "data": {
++      "duration": 112267
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:51:53.604Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1792893113603_3wqotoopd",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:51:53.606Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:51:58.047Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:51:58.048Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:51:59.996Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAbout"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:00.994Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:02.869Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:03.574Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageMap"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:04.069Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:06.026Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:08.211Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:09.393Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageMap"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:14.780Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:15.966Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 37
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:54:25.789Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "session_end",
++    "data": {
++      "duration": 152186
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:43.091Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1793004883090_2putaljf0",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:43.092Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:45.436Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:45.436Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:47.662Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAbout"
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:49.909Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:54.301Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:56.971Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 46
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:55:48.516Z",
++    "sessionId": "sess_1793004948516_sc2e5uq15",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1793004948516_sc2e5uq15",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:55:48.518Z",
++    "sessionId": "sess_1793004948516_sc2e5uq15",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:58:28.982Z",
++    "sessionId": "sess_1793004948516_sc2e5uq15",
++    "event": "session_end",
++    "data": {
++      "duration": 160466
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:35:36.914Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1793183736914_ztdld0m09",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:35:36.915Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:35:38.723Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:35:38.724Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:35:43.125Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAbout"
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:35:44.355Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:35:45.480Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageMap"
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:35:47.775Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:35:51.646Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 58
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:36:43.556Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "session_end",
++    "data": {
++      "duration": 66642
++    }
++  },
++  {
++    "timestamp": "2026-10-29T12:34:13.038Z",
++    "sessionId": "sess_1793277253038_aj5pa1tio",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1793277253038_aj5pa1tio",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-29T12:34:13.039Z",
++    "sessionId": "sess_1793277253038_aj5pa1tio",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-29T12:34:13.042Z",
++    "sessionId": "sess_1793277253041_vnjjo547b",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1793277253041_vnjjo547b",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-29T12:34:13.044Z",
++    "sessionId": "sess_1793277253041_vnjjo547b",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-29T12:34:38.425Z",
++    "sessionId": "sess_1793277253041_vnjjo547b",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-29T12:34:38.425Z",
++    "sessionId": "sess_1793277253041_vnjjo547b",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-29T12:34:39.813Z",
++    "sessionId": "sess_1793277253041_vnjjo547b",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAbout"
++    }
++  },
++  {
++    "timestamp": "2026-10-29T12:34:42.111Z",
++    "sessionId": "sess_1793277253041_vnjjo547b",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-29T12:34:44.995Z",
++    "sessionId": "sess_1793277253041_vnjjo547b",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  }
++]
+\ No newline at end of file
+diff --git a/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-30.json b/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-30.json
+new file mode 100644
+index 0000000..524ab87
+--- /dev/null
++++ b/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-30.json
+@@ -0,0 +1,610 @@
++[
++  {
++    "timestamp": "2026-10-24T00:36:30.977Z",
++    "sessionId": "sess_1792802190977_k34xwdpay",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1792802190977_k34xwdpay",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T00:36:30.979Z",
++    "sessionId": "sess_1792802190977_k34xwdpay",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-24T00:36:31.772Z",
++    "sessionId": "sess_1792802190977_k34xwdpay",
++    "event": "session_end",
++    "data": {
++      "duration": 795
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:09.301Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1792807749301_rfgqo6ntq",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:09.303Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:13.073Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:14.355Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:14.355Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:17.159Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAbout"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:17.962Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:19.349Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:22.734Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 11
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:28.303Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "session_end",
++    "data": {
++      "duration": 19002
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:10:58.230Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1792807858229_poc7q1v85",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:10:58.231Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:03.729Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:05.238Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:05.238Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:05.704Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAbout"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:08.040Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:12.032Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 20
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:47.963Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 21
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:12:29.063Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 22
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:12:50.496Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "session_end",
++    "data": {
++      "duration": 112267
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:51:53.604Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1792893113603_3wqotoopd",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:51:53.606Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:51:58.047Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:51:58.048Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:51:59.996Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAbout"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:00.994Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:02.869Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:03.574Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageMap"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:04.069Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:06.026Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:08.211Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:09.393Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageMap"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:14.780Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:15.966Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 37
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:54:25.789Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "session_end",
++    "data": {
++      "duration": 152186
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:43.091Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1793004883090_2putaljf0",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:43.092Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:45.436Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:45.436Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:47.662Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAbout"
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:49.909Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:54.301Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:56.971Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 46
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:55:48.516Z",
++    "sessionId": "sess_1793004948516_sc2e5uq15",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1793004948516_sc2e5uq15",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:55:48.518Z",
++    "sessionId": "sess_1793004948516_sc2e5uq15",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:58:28.982Z",
++    "sessionId": "sess_1793004948516_sc2e5uq15",
++    "event": "session_end",
++    "data": {
++      "duration": 160466
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:35:36.914Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1793183736914_ztdld0m09",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:35:36.915Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:35:38.723Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:35:38.724Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:35:43.125Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAbout"
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:35:44.355Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:35:45.480Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageMap"
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:35:47.775Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:35:51.646Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 58
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:36:43.556Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "session_end",
++    "data": {
++      "duration": 66642
++    }
++  },
++  {
++    "timestamp": "2026-10-29T12:34:13.038Z",
++    "sessionId": "sess_1793277253038_aj5pa1tio",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1793277253038_aj5pa1tio",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-29T12:34:13.039Z",
++    "sessionId": "sess_1793277253038_aj5pa1tio",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-29T12:34:13.042Z",
++    "sessionId": "sess_1793277253041_vnjjo547b",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1793277253041_vnjjo547b",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-29T12:34:13.044Z",
++    "sessionId": "sess_1793277253041_vnjjo547b",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-29T12:34:38.425Z",
++    "sessionId": "sess_1793277253041_vnjjo547b",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-29T12:34:38.425Z",
++    "sessionId": "sess_1793277253041_vnjjo547b",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-29T12:34:39.813Z",
++    "sessionId": "sess_1793277253041_vnjjo547b",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAbout"
++    }
++  },
++  {
++    "timestamp": "2026-10-29T12:34:42.111Z",
++    "sessionId": "sess_1793277253041_vnjjo547b",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-29T12:34:44.995Z",
++    "sessionId": "sess_1793277253041_vnjjo547b",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-29T12:34:46.467Z",
++    "sessionId": "sess_1793277253041_vnjjo547b",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 69
++    }
++  },
++  {
++    "timestamp": "2026-10-29T12:35:00.221Z",
++    "sessionId": "sess_1793277253041_vnjjo547b",
++    "event": "session_end",
++    "data": {
++      "duration": 47180
++    }
++  },
++  {
++    "timestamp": "2026-10-30T00:46:14.537Z",
++    "sessionId": "sess_1793321174537_fehdbbr1r",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1793321174537_fehdbbr1r",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-30T00:46:14.541Z",
++    "sessionId": "sess_1793321174537_fehdbbr1r",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-30T00:46:34.717Z",
++    "sessionId": "sess_1793321174537_fehdbbr1r",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  }
++]
+\ No newline at end of file
+diff --git a/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-31.json b/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-31.json
+new file mode 100644
+index 0000000..9100f20
+--- /dev/null
++++ b/02-20Days-Challenge/Campus-WiFi-Map/process_logs/telemetry_logs_2026-10-31.json
+@@ -0,0 +1,676 @@
++[
++  {
++    "timestamp": "2026-10-24T00:36:30.977Z",
++    "sessionId": "sess_1792802190977_k34xwdpay",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1792802190977_k34xwdpay",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T00:36:30.979Z",
++    "sessionId": "sess_1792802190977_k34xwdpay",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-24T00:36:31.772Z",
++    "sessionId": "sess_1792802190977_k34xwdpay",
++    "event": "session_end",
++    "data": {
++      "duration": 795
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:09.301Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1792807749301_rfgqo6ntq",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:09.303Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:13.073Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:14.355Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:14.355Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:17.159Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAbout"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:17.962Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:19.349Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:22.734Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 11
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:28.303Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "session_end",
++    "data": {
++      "duration": 19002
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:10:58.230Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1792807858229_poc7q1v85",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:10:58.231Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:03.729Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:05.238Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:05.238Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:05.704Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAbout"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:08.040Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:12.032Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 20
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:47.963Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 21
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:12:29.063Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 22
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:12:50.496Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "session_end",
++    "data": {
++      "duration": 112267
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:51:53.604Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1792893113603_3wqotoopd",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:51:53.606Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:51:58.047Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:51:58.048Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:51:59.996Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAbout"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:00.994Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:02.869Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:03.574Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageMap"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:04.069Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:06.026Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:08.211Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:09.393Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageMap"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:14.780Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:52:15.966Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 37
++    }
++  },
++  {
++    "timestamp": "2026-10-25T01:54:25.789Z",
++    "sessionId": "sess_1792893113603_3wqotoopd",
++    "event": "session_end",
++    "data": {
++      "duration": 152186
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:43.091Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1793004883090_2putaljf0",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:43.092Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:45.436Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:45.436Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:47.662Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAbout"
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:49.909Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:54.301Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:54:56.971Z",
++    "sessionId": "sess_1793004883090_2putaljf0",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 46
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:55:48.516Z",
++    "sessionId": "sess_1793004948516_sc2e5uq15",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1793004948516_sc2e5uq15",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:55:48.518Z",
++    "sessionId": "sess_1793004948516_sc2e5uq15",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-26T08:58:28.982Z",
++    "sessionId": "sess_1793004948516_sc2e5uq15",
++    "event": "session_end",
++    "data": {
++      "duration": 160466
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:35:36.914Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1793183736914_ztdld0m09",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:35:36.915Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:35:38.723Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:35:38.724Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:35:43.125Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAbout"
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:35:44.355Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:35:45.480Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageMap"
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:35:47.775Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:35:51.646Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 58
++    }
++  },
++  {
++    "timestamp": "2026-10-28T10:36:43.556Z",
++    "sessionId": "sess_1793183736914_ztdld0m09",
++    "event": "session_end",
++    "data": {
++      "duration": 66642
++    }
++  },
++  {
++    "timestamp": "2026-10-29T12:34:13.038Z",
++    "sessionId": "sess_1793277253038_aj5pa1tio",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1793277253038_aj5pa1tio",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-29T12:34:13.039Z",
++    "sessionId": "sess_1793277253038_aj5pa1tio",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-29T12:34:13.042Z",
++    "sessionId": "sess_1793277253041_vnjjo547b",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1793277253041_vnjjo547b",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-29T12:34:13.044Z",
++    "sessionId": "sess_1793277253041_vnjjo547b",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-29T12:34:38.425Z",
++    "sessionId": "sess_1793277253041_vnjjo547b",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-29T12:34:38.425Z",
++    "sessionId": "sess_1793277253041_vnjjo547b",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-29T12:34:39.813Z",
++    "sessionId": "sess_1793277253041_vnjjo547b",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAbout"
++    }
++  },
++  {
++    "timestamp": "2026-10-29T12:34:42.111Z",
++    "sessionId": "sess_1793277253041_vnjjo547b",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-29T12:34:44.995Z",
++    "sessionId": "sess_1793277253041_vnjjo547b",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-29T12:34:46.467Z",
++    "sessionId": "sess_1793277253041_vnjjo547b",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 69
++    }
++  },
++  {
++    "timestamp": "2026-10-29T12:35:00.221Z",
++    "sessionId": "sess_1793277253041_vnjjo547b",
++    "event": "session_end",
++    "data": {
++      "duration": 47180
++    }
++  },
++  {
++    "timestamp": "2026-10-30T00:46:14.537Z",
++    "sessionId": "sess_1793321174537_fehdbbr1r",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1793321174537_fehdbbr1r",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-30T00:46:14.541Z",
++    "sessionId": "sess_1793321174537_fehdbbr1r",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-30T00:46:34.717Z",
++    "sessionId": "sess_1793321174537_fehdbbr1r",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-30T00:46:36.129Z",
++    "sessionId": "sess_1793321174537_fehdbbr1r",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 74
++    }
++  },
++  {
++    "timestamp": "2026-10-30T00:46:42.717Z",
++    "sessionId": "sess_1793321174537_fehdbbr1r",
++    "event": "session_end",
++    "data": {
++      "duration": 28180
++    }
++  },
++  {
++    "timestamp": "2026-10-31T00:50:01.148Z",
++    "sessionId": "sess_1793407801147_bt5gfsr06",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1793407801147_bt5gfsr06",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-31T00:50:01.150Z",
++    "sessionId": "sess_1793407801147_bt5gfsr06",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-31T00:50:05.856Z",
++    "sessionId": "sess_1793407801147_bt5gfsr06",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-31T00:50:05.856Z",
++    "sessionId": "sess_1793407801147_bt5gfsr06",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-31T00:50:09.725Z",
++    "sessionId": "sess_1793407801147_bt5gfsr06",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-31T00:50:11.193Z",
++    "sessionId": "sess_1793407801147_bt5gfsr06",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  }
++]
+\ No newline at end of file
+diff --git a/02-20Days-Challenge/Campus-WiFi-Map/src/index.html b/02-20Days-Challenge/Campus-WiFi-Map/src/index.html
+index 193cd2f..3f4f2d4 100644
+--- a/02-20Days-Challenge/Campus-WiFi-Map/src/index.html
++++ b/02-20Days-Challenge/Campus-WiFi-Map/src/index.html
+@@ -25,6 +25,15 @@
+             --radius: 12px;
+         }
+ 
++        [data-theme="dark"] {
++            --bg: #1a202c;
++            --card: #2d3748;
++            --text: #e2e8f0;
++            --text-light: #a0aec0;
++            --border: #4a5568;
++            --shadow: 0 4px 20px rgba(0,0,0,0.3);
++        }
++
+         * { margin: 0; padding: 0; box-sizing: border-box; }
+ 
+         body {
+@@ -33,6 +42,7 @@
+             color: var(--text);
+             min-height: 100vh;
+             padding-bottom: 70px;
++            transition: background 0.3s, color 0.3s;
+         }
+ 
+         /* Header */
+@@ -55,6 +65,29 @@
+             align-items: center;
+         }
+ 
++        .theme-toggle {
++            background: rgba(255,255,255,0.2);
++            border: 1px solid rgba(255,255,255,0.4);
++            color: white;
++            width: 36px;
++            height: 36px;
++            border-radius: 50%;
++            cursor: pointer;
++            font-size: 1.2em;
++            display: flex;
++            align-items: center;
++            justify-content: center;
++            transition: all 0.3s;
++        }
++
++        .theme-toggle:hover { background: rgba(255,255,255,0.3); }
++
++        .header-controls {
++            display: flex;
++            gap: 8px;
++            align-items: center;
++        }
++
+         .building-select {
+             background: rgba(255,255,255,0.2);
+             border: 1px solid rgba(255,255,255,0.4);
+@@ -474,11 +507,14 @@
+                 <h1>校园WiFi信号地图</h1>
+                 <p>ICEC 2026-0180 | 深圳城市职业学院</p>
+             </div>
+-            <select class="building-select" id="buildingSelect">
+-                <option value="building_a">实训楼 4F</option>
+-                <option value="canteen">食堂/图书馆</option>
+-                <option value="stairwell">楼梯间</option>
+-            </select>
++            <div class="header-controls">
++                <button class="theme-toggle" id="themeToggle" title="切换深色模式">🌙</button>
++                <select class="building-select" id="buildingSelect">
++                    <option value="building_a">实训楼 4F</option>
++                    <option value="canteen">食堂/图书馆</option>
++                    <option value="stairwell">楼梯间</option>
++                </select>
++            </div>
+         </div>
+     </div>
+ 
+@@ -515,6 +551,12 @@
+             <h2>延迟对比 (ms)</h2>
+             <div class="bar-chart" id="latencyChart" style="height:160px;"></div>
+         </div>
++
++        <div class="card">
++            <h2>信号趋势</h2>
++            <p style="font-size:0.85em;color:var(--text-light);margin-bottom:12px;">各测量点信号强度变化趋势</p>
++            <canvas id="trendChart" width="800" height="300" style="width:100%;height:auto;"></canvas>
++        </div>
+     </div>
+ 
+     <!-- Page: Add -->
+@@ -579,6 +621,7 @@
+                 <button class="btn btn-secondary btn-sm" onclick="importCSV()">导入 CSV</button>
+                 <button class="btn btn-secondary btn-sm" onclick="exportJSON()">导出 JSON 备份</button>
+                 <button class="btn btn-secondary btn-sm" onclick="telemetry.exportLogs()">导出运行日志</button>
++                <button class="btn btn-secondary btn-sm" onclick="shareApp()">📤 分享应用</button>
+                 <button class="btn btn-danger btn-sm" onclick="resetData()">重置所有数据</button>
+             </div>
+             <input type="file" id="fileInput" accept=".csv,.json" style="display:none" onchange="handleFileImport(event)">
+@@ -721,6 +764,31 @@
+ 
+     let allData = loadData();
+ 
++    // ===== Theme Toggle =====
++    function initTheme() {
++        const saved = localStorage.getItem('campus_wifi_theme');
++        if (saved === 'dark') {
++            document.documentElement.setAttribute('data-theme', 'dark');
++            document.getElementById('themeToggle').textContent = '☀️';
++        }
++    }
++
++    document.getElementById('themeToggle').addEventListener('click', function() {
++        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
++        if (isDark) {
++            document.documentElement.removeAttribute('data-theme');
++            this.textContent = '🌙';
++            localStorage.setItem('campus_wifi_theme', 'light');
++        } else {
++            document.documentElement.setAttribute('data-theme', 'dark');
++            this.textContent = '☀️';
++            localStorage.setItem('campus_wifi_theme', 'dark');
++        }
++        if (telemetry) telemetry.log('theme_toggle', { theme: isDark ? 'light' : 'dark' });
++    });
++
++    initTheme();
++
+     // ===== Utility =====
+     function getSignalClass(s) {
+         if (s > -55) return 'excellent';
+@@ -893,6 +961,75 @@
+         renderBarChart('signalChart', data, 'signal', 100, true);
+         renderBarChart('speedChart', data, 'download', 100, false);
+         renderBarChart('latencyChart', data, 'latency', 70, false);
++        renderTrendChart(data);
++    }
++
++    function renderTrendChart(data) {
++        const canvas = document.getElementById('trendChart');
++        const ctx = canvas.getContext('2d');
++        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
++        
++        ctx.clearRect(0, 0, canvas.width, canvas.height);
++        
++        if (data.length === 0) return;
++        
++        const padding = 50;
++        const chartWidth = canvas.width - padding * 2;
++        const chartHeight = canvas.height - padding * 2;
++        
++        const minSignal = Math.min(...data.map(d => d.signal));
++        const maxSignal = Math.max(...data.map(d => d.signal));
++        const signalRange = maxSignal - minSignal || 10;
++        
++        // Draw grid
++        ctx.strokeStyle = isDark ? '#4a5568' : '#e2e8f0';
++        ctx.lineWidth = 1;
++        for (let i = 0; i <= 4; i++) {
++            const y = padding + (chartHeight / 4) * i;
++            ctx.beginPath();
++            ctx.moveTo(padding, y);
++            ctx.lineTo(canvas.width - padding, y);
++            ctx.stroke();
++            
++            // Y-axis labels
++            const val = Math.round(maxSignal - (signalRange / 4) * i);
++            ctx.fillStyle = isDark ? '#a0aec0' : '#718096';
++            ctx.font = '12px sans-serif';
++            ctx.textAlign = 'right';
++            ctx.fillText(val + 'dBm', padding - 8, y + 4);
++        }
++        
++        // Draw line
++        ctx.strokeStyle = '#667eea';
++        ctx.lineWidth = 3;
++        ctx.beginPath();
++        
++        data.forEach((point, i) => {
++            const x = padding + (chartWidth / (data.length - 1 || 1)) * i;
++            const y = padding + chartHeight - ((point.signal - minSignal) / signalRange) * chartHeight;
++            
++            if (i === 0) ctx.moveTo(x, y);
++            else ctx.lineTo(x, y);
++        });
++        ctx.stroke();
++        
++        // Draw points
++        data.forEach((point, i) => {
++            const x = padding + (chartWidth / (data.length - 1 || 1)) * i;
++            const y = padding + chartHeight - ((point.signal - minSignal) / signalRange) * chartHeight;
++            
++            ctx.fillStyle = getSigColor(getSignalClass(point.signal));
++            ctx.beginPath();
++            ctx.arc(x, y, 6, 0, Math.PI * 2);
++            ctx.fill();
++            
++            // X-axis labels
++            ctx.fillStyle = isDark ? '#a0aec0' : '#718096';
++            ctx.font = '10px sans-serif';
++            ctx.textAlign = 'center';
++            const label = point.name.length > 6 ? point.name.substring(0, 6) + '...' : point.name;
++            ctx.fillText(label, x, canvas.height - 10);
++        });
+     }
+ 
+     function renderBarChart(containerId, data, key, maxVal, isSignal) {
+@@ -1124,6 +1261,26 @@
+     }
+ 
+     // ===== Export / Import =====
++    function shareApp() {
++        const url = 'https://xueqinzhan.github.io/ICEC-2026-0180-qinzhan/';
++        const text = `📡 校园WiFi信号地图\n\n快来查看校园各区域的WiFi信号覆盖情况！\n\n🔗 ${url}\n\nICEC 2026 项目四作品`;
++        
++        if (navigator.share) {
++            navigator.share({
++                title: '校园WiFi信号地图',
++                text: text,
++                url: url
++            }).catch(() => {});
++        } else {
++            navigator.clipboard.writeText(text).then(() => {
++                showToast('分享文案已复制到剪贴板');
++            }).catch(() => {
++                prompt('复制以下文案分享：', text);
++            });
++        }
++        telemetry.log('app_shared', { method: navigator.share ? 'native' : 'clipboard' });
++    }
++
+     function exportCSV() {
+         const headers = 'ID,位置名称,环境,信号(dBm),延迟(ms),下载(Mbps),上传(Mbps),X(%),Y(%),建筑,时间\n';
+         const rows = allData.map(d =>
+diff --git a/02-20Days-Challenge/Campus-WiFi-Map/src/manifest.json b/02-20Days-Challenge/Campus-WiFi-Map/src/manifest.json
+new file mode 100644
+index 0000000..94aa32f
+--- /dev/null
++++ b/02-20Days-Challenge/Campus-WiFi-Map/src/manifest.json
+@@ -0,0 +1,17 @@
++{
++  "name": "校园WiFi信号地图",
++  "short_name": "WiFi地图",
++  "description": "校园WiFi信号覆盖质量地图，基于实测数据",
++  "start_url": "/index.html",
++  "display": "standalone",
++  "background_color": "#667eea",
++  "theme_color": "#667eea",
++  "orientation": "any",
++  "icons": [
++    {
++      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23667eea'/><text x='50' y='65' font-size='60' text-anchor='middle' fill='white'>📡</text></svg>",
++      "sizes": "192x192",
++      "type": "image/svg+xml"
++    }
++  ]
++}
+diff --git a/02-20Days-Challenge/Campus-WiFi-Map/src/telemetry_logs_2026-10-24 (4).json b/02-20Days-Challenge/Campus-WiFi-Map/src/telemetry_logs_2026-10-24 (4).json
+new file mode 100644
+index 0000000..1a4d59f
+--- /dev/null
++++ b/02-20Days-Challenge/Campus-WiFi-Map/src/telemetry_logs_2026-10-24 (4).json	
+@@ -0,0 +1,183 @@
++[
++  {
++    "timestamp": "2026-10-24T00:36:30.977Z",
++    "sessionId": "sess_1792802190977_k34xwdpay",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1792802190977_k34xwdpay",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T00:36:30.979Z",
++    "sessionId": "sess_1792802190977_k34xwdpay",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-24T00:36:31.772Z",
++    "sessionId": "sess_1792802190977_k34xwdpay",
++    "event": "session_end",
++    "data": {
++      "duration": 795
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:09.301Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1792807749301_rfgqo6ntq",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:09.303Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:13.073Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:14.355Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:14.355Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:17.159Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAbout"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:17.962Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:19.349Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:22.734Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 11
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:09:28.303Z",
++    "sessionId": "sess_1792807749301_rfgqo6ntq",
++    "event": "session_end",
++    "data": {
++      "duration": 19002
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:10:58.230Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "session_start",
++    "data": {
++      "sessionId": "sess_1792807858229_poc7q1v85",
++      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:10:58.231Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "app_initialized",
++    "data": {
++      "dataPoints": 8
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:03.729Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageData"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:05.238Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageHeat"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:05.238Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "heatmap_rendered",
++    "data": {
++      "building": "building_a",
++      "dataPoints": 6
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:05.704Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAbout"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:08.040Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "tab_switch",
++    "data": {
++      "tab": "pageAdd"
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:12.032Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 20
++    }
++  },
++  {
++    "timestamp": "2026-10-24T02:11:47.963Z",
++    "sessionId": "sess_1792807858229_poc7q1v85",
++    "event": "telemetry_exported",
++    "data": {
++      "logCount": 21
++    }
++  }
++]
+\ No newline at end of file

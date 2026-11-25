@@ -20,6 +20,34 @@
 
 ## 目录结构
 
-- `01-Field-Discovery/` — 阶段一：报告、照片与 `raw_data/`
-- `02-20Days-Challenge/` — 阶段二：源码、`process-logs/` 与 `iterations/`
-- `03-AI-Collaboration/` — 关键 AI 提问与排障对话记录
+```
+ICEC-2026-0180-qinzhan/
+├── 01-Field-Discovery/              阶段一：实地测评
+│   ├── README.md                    ← 课题索引（2 个课题、数据量、选做说明）
+│   ├── 课题02-手机发热与掉电实测/    报告 + 56 组数据 + 现场照片
+│   ├── 课题03-WiFi信号盲区测绘/      报告 + 24 组数据 + 6 张现场照片
+│   └── report.md                    两课题合并的原始提交版
+├── 02-20Days-Challenge/             阶段二：作品与过程数据
+│   ├── Campus-WiFi-Map/             作品源码（src/）+ 线上站点（docs/）
+│   │   └── process_logs/            ← 12 份遥测日志 JSON 原始文件（417 条）
+│   ├── P2-Data-Cleaning/            数据清洗管道（Python）+ CSV + 质量报告
+│   ├── process-logs/README.md       ← 日志统计分析与结论
+│   └── iterations/                  ← 3 次迭代的 Git diff（.patch）与说明
+└── 03-AI-Collaboration/             关键 AI 提问与排障对话记录（6 篇）
+```
+
+## 线上地址
+
+| 用途 | 地址 |
+|-----|------|
+| 主应用 | <https://xueqinzhan.github.io/ICEC-2026-0180-qinzhan/> |
+| 反馈表 | <https://xueqinzhan.github.io/ICEC-2026-0180-qinzhan/feedback.html> |
+
+国内网络可直接访问，无需代理。
+
+## 快速查阅路径
+
+- 想看**实测原始数据** → [`01-Field-Discovery/`](01-Field-Discovery/README.md)（表格已内嵌在 README，GitHub 直接可读）
+- 想看**迭代改了什么** → [`02-20Days-Challenge/iterations/`](02-20Days-Challenge/iterations/README.md)
+- 想看**有没有人真在用** → [`02-20Days-Challenge/process-logs/`](02-20Days-Challenge/process-logs/README.md)
+- 想看**怎么和 AI 协作排障** → [`03-AI-Collaboration/`](03-AI-Collaboration/README.md)

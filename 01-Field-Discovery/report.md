@@ -2,6 +2,10 @@
 
 > 考生：qinzhan | 学号后四位：0180 | GitHub：[ICEC-2026-0180-qinzhan](https://github.com/xueqinzhan/ICEC-2026-0180-qinzhan)
 
+> **说明**：本文件是两个课题合并的原始提交版报告。为方便查阅，已按课题拆分为两个独立目录，并在各自 README 中内嵌了可直接在 GitHub 阅读的原始数据表格——
+> **[课题02：手机发热与掉电实测](课题02-手机发热与掉电实测/README.md)** ｜ **[课题03：WiFi 信号盲区测绘](课题03-WiFi信号盲区测绘/README.md)**
+> 索引与选做情况见 [01-Field-Discovery/README.md](README.md)。
+
 ---
 
 ## 选题说明
@@ -40,7 +44,7 @@
 
 ### 4. 原始数据
 
-数据文件：`raw_data/ICEC_课题02_数据采集表.xlsx`
+数据文件：`课题02-手机发热与掉电实测/data/ICEC_课题02_数据采集表.xlsx`
 
 ### 5. 数据分析
 
@@ -55,7 +59,7 @@
 
 **折线图说明**：横轴为时间(0-30min)，纵轴为电量(%)。高帧率游戏曲线下降最陡峭，30分钟内从100%降至62%；待机曲线最平缓，仅下降3%。
 
-详细图表见：`raw_data/ICEC_课题02_数据总结.xlsx`
+详细图表见：`课题02-手机发热与掉电实测/data/ICEC_课题02_数据总结.xlsx`
 
 #### 5.2 温度变化对比
 
@@ -68,7 +72,7 @@
 
 **折线图说明**：横轴为时间(0-30min)，纵轴为电池温度(°C)。高帧率游戏温度从30.8°C飙升至43.1°C，温升超过12°C；待机仅上升1.5°C。
 
-详细图表见：`raw_data/ICEC_课题02_数据总结.xlsx`
+详细图表见：`课题02-手机发热与掉电实测/data/ICEC_课题02_数据总结.xlsx`
 
 #### 5.3 关键发现
 
@@ -118,7 +122,7 @@
 
 ### 4. 原始数据
 
-数据文件：`raw_data/ICEC_wifi_v2.xlsx`
+数据文件：`课题03-WiFi信号盲区测绘/data/ICEC_wifi_v2.xlsx`
 
 ### 5. 数据分析
 
@@ -137,7 +141,7 @@
 
 **柱状图说明**：横轴为8个测试点位，纵轴为信号强度(dBm)。431实训楼内部信号最优(-44dBm)，数据机房最差(-82dBm)。
 
-详细图表见：`raw_data/ICEC_课题03_数据总结.xlsx`
+详细图表见：`课题03-WiFi信号盲区测绘/data/ICEC_课题03_数据总结.xlsx`
 
 #### 5.2 延迟与下载速度对比
 
@@ -154,7 +158,7 @@
 
 **柱状图说明**：信号强度与延迟呈强正相关，信号每减弱10dBm，延迟增加约8-10ms。下载速度从最优的82.5Mbps降至最差的14.2Mbps，衰减幅度达83%。
 
-详细图表见：`raw_data/ICEC_课题03_数据总结.xlsx`
+详细图表见：`课题03-WiFi信号盲区测绘/data/ICEC_课题03_数据总结.xlsx`
 
 #### 5.3 衰减规律分析
 
@@ -176,20 +180,20 @@
 
 ## 过程照片
 
-照片清单：`photos/photo_list.csv`
+照片清单：`课题03-WiFi信号盲区测绘/photos/photo_list.csv`
 
 ### 课题02：手机发热与掉电实测
 
-- `phone_test_selfie.jpg`：课题02测试现场照片（手机+系统电池分析）
+- `课题02-手机发热与掉电实测/photos/phone_test_selfie.jpg`：课题02测试现场照片（手机+系统电池分析）
 
 ### 课题03：无线信号盲区测绘
 
-- `wifi_dorm_balcony.jpg`：宿舍阳台WiFi测试现场
-- `wifi_dorm_inside.jpg`：宿舍内部WiFi测试现场
-- `wifi_431_corridor_1.jpg`：431走廊WiFi测试现场（下载3.9Mbps）
-- `wifi_431_corridor_2.jpg`：431走廊WiFi测试现场（下载33.6Mbps）
-- `wifi_library.jpg`：图书馆外文图书室WiFi测试现场（下载19.2Mbps）
-- `wifi_elevator.jpg`：电梯口WiFi测试现场
+- `课题03-WiFi信号盲区测绘/photos/wifi_dorm_balcony.jpg`：宿舍阳台WiFi测试现场
+- `课题03-WiFi信号盲区测绘/photos/wifi_dorm_inside.jpg`：宿舍内部WiFi测试现场
+- `课题03-WiFi信号盲区测绘/photos/wifi_431_corridor_1.jpg`：431走廊WiFi测试现场（下载3.9Mbps）
+- `课题03-WiFi信号盲区测绘/photos/wifi_431_corridor_2.jpg`：431走廊WiFi测试现场（下载33.6Mbps）
+- `课题03-WiFi信号盲区测绘/photos/wifi_library.jpg`：图书馆外文图书室WiFi测试现场（下载19.2Mbps）
+- `课题03-WiFi信号盲区测绘/photos/wifi_elevator.jpg`：电梯口WiFi测试现场
 
 ---
 
